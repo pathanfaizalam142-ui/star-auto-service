@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Premium Auto Services - Star Auto Service</title>
+  <meta name="description" content="Explore our 18 expert automotive care and repair services. From computerized diagnostics and V8 engine overhauls to dynamic wheel alignments and 24x7 roadside assistance.">
+  <!-- Inline Theme Loader to prevent visual flash of dark mode -->
+  <script>
+    if (localStorage.getItem('starAutoTheme') === 'light') {
+      document.documentElement.classList.add('light-theme');
+    }
+  </script>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+  <!-- Loading Animation -->
+  <div id="loader">
+    <div class="loader-ring"></div>
+    <div class="loader-logo">STAR AUTO</div>
+  </div>
+
+  <!-- Header Info Strip -->
+  <div class="header-strip">
+    <div class="header-mechanic">
+      <div class="icon-wrapper">
+        <i data-lucide="phone"></i>
+      </div>
+      <div>
+        <span class="header-mechanic-label">Mukhtyar ali</span>
+        <a href="tel:+919106770230" class="header-mechanic-phone">+91 9106770230</a>
+      </div>
+    </div>
+    <div class="header-logo-area">
+      <h1 class="header-logo-title">STAR AUTO SERVICE</h1>
+      <div class="header-logo-experience">33 Years Experience</div>
+      <div class="header-logo-tagline">Best Service Center For All Car Companies</div>
+    </div>
+    <div class="header-mechanic">
+      <div class="icon-wrapper">
+        <i data-lucide="phone"></i>
+      </div>
+      <div>
+        <span class="header-mechanic-label">Iqbal ali</span>
+        <a href="tel:+919909698474" class="header-mechanic-phone">+91 9909698474</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sticky Main Navbar -->
+  <nav class="navbar">
+    <a href="index.html" class="nav-brand">
+      <i data-lucide="wrench" class="gold-text"></i> STAR AUTO <span>SERVICE</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html" class="active">Services</a></li>
+      <li><a href="book-service.html">Book Service</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-cta" style="display: flex; align-items: center; gap: 1rem;">
+      <button id="themeToggleBtn" class="theme-toggle-btn" aria-label="Toggle Dark/Light Mode" title="Toggle Theme">
+        <i data-lucide="sun" class="sun-icon"></i>
+        <i data-lucide="moon" class="moon-icon"></i>
+      </button>
+      <a href="book-service.html" class="btn btn-primary">Book Slot</a>
+    </div>
+    <button class="hamburger" id="hamburgerBtn" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Overlay Navigation -->
+  <div class="mobile-nav-overlay" id="mobileNavOverlay">
+    <div class="mobile-theme-toggle-wrap" style="padding: 2rem 1.5rem 1rem 1.5rem; text-align: center; border-bottom: 1px solid var(--glass-border); display: flex; justify-content: center;">
+      <button id="mobileThemeToggleBtn" class="theme-toggle-btn" aria-label="Toggle Dark/Light Mode" style="display: flex; gap: 0.5rem; width: auto; padding: 0 1.5rem;">
+        <span style="font-size: 0.8rem; font-family: var(--font-mono); color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; display: inline-block; margin-right: 0.25rem;">Theme:</span>
+        <i data-lucide="sun" class="sun-icon"></i>
+        <i data-lucide="moon" class="moon-icon"></i>
+      </button>
+    </div>
+    <ul class="mobile-nav-links" style="margin-top: 1.5rem;">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html" class="active">Services</a></li>
+      <li><a href="book-service.html">Book Service</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li style="margin-top: 1rem;">
+        <a href="book-service.html" class="btn btn-primary" style="font-size: 1rem; padding: 0.75rem 2rem; color: #050505;">Book Slot Now</a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Page Header Title Section -->
+  <header class="page-header">
+    <div class="page-header-bg" style="background-image: url('https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?q=80&w=1200&auto=format&fit=crop');"></div>
+    <div class="page-header-overlay"></div>
+    <div class="page-header-content">
+      <h1 class="page-title">Services</h1>
+      <p class="page-header-subtitle">Professional Repair & Maintenance for All Car Brands</p>
+      <p class="page-header-tagline">"Quality Work • Genuine Parts • Trusted Service Since 33 Years"</p>
+      <div class="breadcrumbs" style="margin-top: 1.5rem;">
+        <a href="index.html">Home</a>
+        <span>→</span>
+        <span>Services</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Services Grid Section -->
+  <section class="services-grid-section">
+    <div class="services-container">
+      <div class="services-header" style="margin-bottom: 5rem;">
+        <span class="section-badge">Premium Care</span>
+        <h2 class="section-title">Our Expert Workshop Offerings</h2>
+        <p class="section-desc">Experience unmatched automotive craftsmanship. Select from our comprehensive range of high-end mechanical, digital, and restorative services customized for your automobile.</p>
+      </div>
+
+      <div class="services-page-grid">
+        <!-- 1. General Car Service -->
+        <div class="service-grid-card">
+          <div class="service-card-img-container">
+            <img src="https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?q=80&w=600&auto=format&fit=crop" alt="General Car Service" loading="lazy">
+            <div class="service-card-img-overlay"></div>
+            <div class="service-grid-card-icon">
+              <i data-lucide="settings"></i>
+            </div>
+          </div>
+          <div class="service-grid-card-body">
+            <h3 class="service-grid-card-title">General Car Service</h3>
+            <p class="service-grid-card-desc">Comprehensive multi-point inspection, premium fluids top-up, filters replacement, and extensive absolute safety checks.</p>
+            <div class="service-grid-card-meta">
+              <i data-lucide="clock"></i>
+              <span>Estimated Time: 3-5 Hours</span>
+            </div>
+            <a href="book-service.html?service=general" class="btn btn-primary" style="width: 100%; text-align: center;">Book This Service</a>
+          </div>
+        </div>
+
+        <!-- 2. Engine Repair -->
+        <div class="service-grid-card">
+          <div class="service-card-img-container">
+            <img src="https://images.unsplash.com/photo-1486006920555-c77dce18193b?q=80&w=600&auto=format&fit=crop" alt="Engine Repair" loading="lazy">
+            <div class="service-card-img-overlay"></div>
+            <div class="service-grid-card-icon">
+              <i data-lucide="cpu"></i>
+            </div>
+          </div>
+          <div class="service-grid-card-body">
+            <h3 class="service-grid-card-title">Engine Repair</h3>
+            <p class="service-grid-card-desc">Surgical diagnosis and precision repair for cylinder heads, timing belts, manifolds, sensors, and structural engine blocks.</p>
+            <div class="service-grid-card-meta">
+              <i data-lucide="clock"></i>
+              <span>Estimated Time: 1-2 Days</span>
+            </div>
+            <a href="book-service.html?service=engine" class="btn btn-primary" style="width: 100%; text-align: center;">Book This Service</a>
+          </div>
+        </div>
+
+        <!-- 3. Engine Overhaul -->
+        <div class="service-grid-card">
+          <div class="service-card-img-container">
+            <img src="https://images.unsplash.com/photo-1517524206127-48bbd363f3d7?q=80&w=600&auto=format&fit=crop" alt="Engine Overhaul" loading="lazy">
+            <div class="service-card-img-overlay"></div>
+            <div class="service-grid-card-icon">
+              <i data-lucide="activity"></i>
+            </div>
+          </div>
+          <div class="service-grid-card-body">
+            <h3 class="service-grid-card-title">Engine Overhaul</h3>
+            <p class="service-grid-card-desc">Complete engine tear-down, cylinder/piston re-machining, comprehensive gasket swap, and factory-specification rebuild calibration.</p>
+            <div class="service-grid-card-meta">
+              <i data-lucide="clock"></i>
+              <span>Estimated Time: 4-7 Days</span>
+            </div>
+            <a href="book-service.html?service=overhaul" class="btn btn-primary" style="width: 100%; text-align: center;">Book This Service</a>
+          </div>
+        </div>
+
+        <!-- 4. Computer Diagnostics -->
+        <div class="service-grid-card">
+          <div class="service-card-img-container">
+            <img src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?q=80&w=600&auto=format&fit=crop" alt="Computer Diagnostics" loading="lazy">
+            <div class="service-card-img-overlay"></div>
+            <div class="service-grid-card-icon">
+              <i data-lucide="scan-line"></i>
+            </div>
+          </div>
+          <div class="service-grid-card-body">
+            <h3 class="service-grid-card-title">Computer Diagnostics</h3>
+            <p class="service-grid-card-desc">Advanced ECU scanning, live sensor feed analysis, precise fault code mapping, and electronic module tuning.</p>
+            <div class="service-grid-card-meta">
+              <i data-lucide="clock"></i>
+              <span>Estimated Time: 1 Hour</span>
+            </div>
+            <a href="book-service.html?service=diagnostics" class="btn btn-primary" style="width: 100%; text-align: center;">Book This Service</a>
+          </div>
+        </div>
+
+        <!-- 5. Oil & Filter Change -->
+        <div class="service-grid-card">
+          <div class="service-card-img-container">
+            <img src="https://images.unsplash.com/photo-1554224155-6f29dfbb2e61?q=80&w=600&auto=format&fit=crop" alt="Oil & Filter Change" loading="lazy">
+            <div class="service-card-img-overlay"></div>
+            <div class="service-grid-card-icon">
+              <i data-lucide="droplet"></i>
+            </div>
+          </div>
+          <div class="service-grid-card-body">
+            <h3 class="service-grid-card-title">Oil & Filter Change</h3>
+            <p class="service-grid-card-desc">Premium grade fully-synthetic engine oil flushing, OES filter swap, and chassis lubrication checks.</p>
+            <div class="service-grid-card-meta">
+              <i data-lucide="clock"></i>
+              <span>Estimated Time: 45 Mins</span>
+            </div>
+            <a href="book-service.html?service=oil-change" class="btn btn-primary" style="width: 100%; text-align: center;">Book This Service</a>
+          </div>
+        </div>
+
+        <!-- 6. Brake Service -->
+        <div class="service-grid-card">
+          <div class="service-card-img-container">
+            <img src="https://images.unsplash.com/photo-1616788494707-ec28f08d05a1?q=80&w=600&auto=format&fit=crop" alt="Brake Service" loading="lazy">
+            <div class="service-card-img-overlay"></div>
+            <div class="service-grid-card-icon">
+              <i data-lucide="shield-alert"></i>
+            </div>
+          </div>
+          <div class="service-grid-card-body">
+            <h3 class="service-grid-card-title">Brake Service</h3>
+            <p class="service-grid-card-desc">Premium low-dust brake pad replacements, disc rotor machining, ABS pump testing, and hydraulic fluid bleeding.</p>
+            <div class="service-grid-card-meta">
+              <i data-lucide="clock"></i>
+              <span>Estimated Time: 2 Hours</span>
+            </div>
+            <a href="book-service.html?service=brakes" class="btn btn-primary" style="width: 100%; text-align: center;">Book This Service</a>
+          </div>
+        </div>
+
+        <!-- 7. Clutch Repair -->
+        <div class="service-grid-card">
+          <div class="service-card-img-container">
+            <img src="https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?q=80&w=600&auto=format&fit=crop" alt="Clutch Repair" loading="lazy">
+            <div class="service-card-img-overlay"></div>
+            <div class="service-grid-card-icon">
+              <i data-lucide="layers"></i>
+            </div>
+          </div>
+          <div class="service-grid-card-body">
+            <h3 class="service-grid-card-title">Clutch Repair</h3>
+            <p class="service-grid-card-desc">Heavy-duty clutch plate replacements, flywheel resurfacing, master cylinder care, and mechanical gear calibrations.</p>
+            <div class="service-grid-card-meta">
+              <i data-lucide="clock"></i>
+              <span>Estimated Time: 1 Day</span>
+            </div>
+            <a href="book-service.html?service=clutch" class="btn btn-primary" style="width: 100%; text-align: center;">Book This Service</a>
+          </div>
+        </div>
+
+        <!-- 8. Suspension Repair -->
+        <div class="service-grid-card">
+          <div class="service-card-img-container">
+            <img src="https://images.unsplash.com/photo-1562620619-3bc3b392e21b?q=80&w=600&auto=format&fit=crop" alt="Suspension Repair" loading="lazy">
+            <div class="service-card-img-overlay"></div>
+            <div class="service-grid-card-icon">
+              <i data-lucide="git-commit"></i>
+            </div>
+          </div>
+          <div class="service-grid-card-body">
+            <h3 class="service-grid-card-title">Suspension Repair</h3>
+            <p class="service-grid-card-desc">Shock absorber replacement, polyurethane bush upgrades, link rod renewals, and control arm restorations.</p>
+            <div class="service-grid-card-meta">
+              <i data-lucide="clock"></i>
+              <span>Estimated Time: 4-6 Hours</span>
+            </div>
+            <a href="book-service.html?service=suspension" class="btn btn-primary" style="width: 100%; text-align: center;">Book This Service</a>
+          </div>
+        </div>
+
+        <!-- 9. Steering Repair -->
+        <div class="service-grid-card">
+          <div class="service-card-img-container">
+            <img src="https://images.unsplash.com/photo-1511919884226-fd3cad34687c?q=80&w=600&auto=format&fit=crop" alt="Steering Repair" loading="lazy">
+            <div class="service-card-img-overlay"></div>
+            <div class="service-grid-card-icon">
+              <i data-lucide="compass"></i>
+            </div>
+          </div>
+          <div class="service-grid-card-body">
+            <h3 class="service-grid-card-title">Steering Repair</h3>
+            <p class="service-grid-card-desc">Power steering pump rebuilds, rack and pinion replacements, tie-rod tuning, and EPS motor calibrations.</p>
+            <div class="service-grid-card-meta">
+              <i data-lucide="clock"></i>
+              <span>Estimated Time: 4-8 Hours</span>
+            </div>
+            <a href="book-service.html?service=steering" class="btn btn-primary" style="width: 100%; text-align: center;">Book This Service</a>
+          </div>
+        </div>
+
+        <!-- 10. Battery Replacement -->
+        <div class="service-grid-card">
+          <div class="service-card-img-container">
+            <img src="https://images.unsplash.com/photo-1617531653332-bd46c24f2068?q=80&w=600&auto=format&fit=crop" alt="Battery Replacement" loading="lazy">
+            <div class="service-card-img-overlay"></div>
+            <div class="service-grid-card-icon">
+              <i data-lucide="zap"></i>
+            </div>
+          </div>
+          <div class="service-grid-card-body">
+            <h3 class="service-grid-card-title">Battery Replacement</h3>
+            <p class="service-grid-card-desc">Precise digital load testing, terminals rust removal, and genuine replacement of luxury heavy-duty batteries with warranty.</p>
+            <div class="service-grid-card-meta">
+              <i data-lucide="clock"></i>
+              <span>Estimated Time: 30 Mins</span>
+            </div>
+            <a href="book-service.html?service=battery" class="btn btn-primary" style="width: 100%; text-align: center;">Book This Service</a>
+          </div>
+        </div>
+
+        <!-- 11. AC Service & Gas Refilling -->
+        <div class="service-grid-card">
+          <div class="service-card-img-container">
+            <img src="https://images.unsplash.com/photo-1504222490345-c075b6008014?q=80&w=600&auto=format&fit=crop" alt="AC Service & Gas Refilling" loading="lazy">
+            <div class="service-card-img-overlay"></div>
+            <div class="service-grid-card-icon">
+              <i data-lucide="wind"></i>
+            </div>
+          </div>
+          <div class="service-grid-card-body">
+            <h3 class="service-grid-card-title">AC Service & Gas Refilling</h3>
+            <p class="service-grid-card-desc">Cabin filter sanitizing, condenser cooling flushes, system leak mappings, and premium grade refrigerant gas refilling.</p>
+            <div class="service-grid-card-meta">
+              <i data-lucide="clock"></i>
+              <span>Estimated Time: 1.5 Hours</span>
+            </div>
+            <a href="book-service.html?service=ac" class="btn btn-primary" style="width: 100%; text-align: center;">Book This Service</a>
+          </div>
+        </div>
+
+        <!-- 12. Radiator Repair -->
+        <div class="service-grid-card">
+          <div class="service-card-img-container">
+            <img src="https://images.unsplash.com/photo-1486006920555-c77dce18193b?q=80&w=600&auto=format&fit=crop" alt="Radiator Repair" loading="lazy">
+            <div class="service-card-img-overlay"></div>
+            <div class="service-grid-card-icon">
+              <i data-lucide="thermometer"></i>
+            </div>
+          </div>
+          <div class="service-grid-card-body">
+            <h3 class="service-grid-card-title">Radiator Repair</h3>
+            <p class="service-grid-card-desc">Full coolant power flushes, thermostat valves swaps, radiator core cleanups, and high-pressure leak testing.</p>
+            <div class="service-grid-card-meta">
+              <i data-lucide="clock"></i>
+              <span>Estimated Time: 3-5 Hours</span>
+            </div>
+            <a href="book-service.html?service=radiator" class="btn btn-primary" style="width: 100%; text-align: center;">Book This Service</a>
+          </div>
+        </div>
+
+        <!-- 13. Wheel Alignment -->
+        <div class="service-grid-card">
+          <div class="service-card-img-container">
+            <img src="https://images.unsplash.com/photo-1530047139182-5485141a7265?q=80&w=600&auto=format&fit=crop" alt="Wheel Alignment" loading="lazy">
+            <div class="service-card-img-overlay"></div>
+            <div class="service-grid-card-icon">
+              <i data-lucide="gauge"></i>
+            </div>
+          </div>
+          <div class="service-grid-card-body">
+            <h3 class="service-grid-card-title">Wheel Alignment</h3>
+            <p class="service-grid-card-desc">Computerized 3D laser alignment to absolute factory angles. Ensures zero tyre drag and perfect highway stability.</p>
+            <div class="service-grid-card-meta">
+              <i data-lucide="clock"></i>
+              <span>Estimated Time: 1 Hour</span>
+            </div>
+            <a href="book-service.html?service=alignment" class="btn btn-primary" style="width: 100%; text-align: center;">Book This Service</a>
+          </div>
+        </div>
+
+        <!-- 14. Wheel Balancing -->
+        <div class="service-grid-card">
+          <div class="service-card-img-container">
+            <img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?q=80&w=600&auto=format&fit=crop" alt="Wheel Balancing" loading="lazy">
+            <div class="service-card-img-overlay"></div>
+            <div class="service-grid-card-icon">
+              <i data-lucide="disc"></i>
+            </div>
+          </div>
+          <div class="service-grid-card-body">
+            <h3 class="service-grid-card-title">Wheel Balancing</h3>
+            <p class="service-grid-card-desc">High-speed dynamic balancing using precise digital weights to completely eliminate steering-wheel high-speed vibrations.</p>
+            <div class="service-grid-card-meta">
+              <i data-lucide="clock"></i>
+              <span>Estimated Time: 45 Mins</span>
+            </div>
+            <a href="book-service.html?service=balancing" class="btn btn-primary" style="width: 100%; text-align: center;">Book This Service</a>
+          </div>
+        </div>
+
+        <!-- 15. Tyre Replacement -->
+        <div class="service-grid-card">
+          <div class="service-card-img-container">
+            <img src="https://images.unsplash.com/photo-1549399542-7e3f8b79c341?q=80&w=600&auto=format&fit=crop" alt="Tyre Replacement" loading="lazy">
+            <div class="service-card-img-overlay"></div>
+            <div class="service-grid-card-icon">
+              <i data-lucide="circle"></i>
+            </div>
+          </div>
+          <div class="service-grid-card-body">
+            <h3 class="service-grid-card-title">Tyre Replacement</h3>
+            <p class="service-grid-card-desc">Procurement, professional tire mounting, valves swaps, and dynamic calibration of world-class high-performance tires.</p>
+            <div class="service-grid-card-meta">
+              <i data-lucide="clock"></i>
+              <span>Estimated Time: 1 Hour</span>
+            </div>
+            <a href="book-service.html?service=tyres" class="btn btn-primary" style="width: 100%; text-align: center;">Book This Service</a>
+          </div>
+        </div>
+
+        <!-- 16. Denting & Painting -->
+        <div class="service-grid-card">
+          <div class="service-card-img-container">
+            <img src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?q=80&w=600&auto=format&fit=crop" alt="Denting & Painting" loading="lazy">
+            <div class="service-card-img-overlay"></div>
+            <div class="service-grid-card-icon">
+              <i data-lucide="palette"></i>
+            </div>
+          </div>
+          <div class="service-grid-card-body">
+            <h3 class="service-grid-card-title">Denting & Painting</h3>
+            <p class="service-grid-card-desc">Precision structural panel dent pull-outs and factory-grade computerized color-matched paint oven-baking.</p>
+            <div class="service-grid-card-meta">
+              <i data-lucide="clock"></i>
+              <span>Estimated Time: 2-4 Days</span>
+            </div>
+            <a href="book-service.html?service=denting" class="btn btn-primary" style="width: 100%; text-align: center;">Book This Service</a>
+          </div>
+        </div>
+
+        <!-- 17. Car Washing & Detailing -->
+        <div class="service-grid-card">
+          <div class="service-card-img-container">
+            <img src="https://images.unsplash.com/photo-1520340356584-f9917d1ecc6f?q=80&w=600&auto=format&fit=crop" alt="Car Washing & Detailing" loading="lazy">
+            <div class="service-card-img-overlay"></div>
+            <div class="service-grid-card-icon">
+              <i data-lucide="sparkles"></i>
+            </div>
+          </div>
+          <div class="service-grid-card-body">
+            <h3 class="service-grid-card-title">Car Washing & Detailing</h3>
+            <p class="service-grid-card-desc">Deep interior hot foam upholstery wash, extensive leather care, clay-bar detailing, and premium polymer wax glaze.</p>
+            <div class="service-grid-card-meta">
+              <i data-lucide="clock"></i>
+              <span>Estimated Time: 3-6 Hours</span>
+            </div>
+            <a href="book-service.html?service=detailing" class="btn btn-primary" style="width: 100%; text-align: center;">Book This Service</a>
+          </div>
+        </div>
+
+        <!-- 18. Insurance Claim Assistance -->
+        <div class="service-grid-card">
+          <div class="service-card-img-container">
+            <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=600&auto=format&fit=crop" alt="Insurance Claim Assistance" loading="lazy">
+            <div class="service-card-img-overlay"></div>
+            <div class="service-grid-card-icon">
+              <i data-lucide="file-text"></i>
+            </div>
+          </div>
+          <div class="service-grid-card-body">
+            <h3 class="service-grid-card-title">Insurance Claim Assistance</h3>
+            <p class="service-grid-card-desc">Seamless end-to-end crash claim file compilation, cashless garages coordination, and surveyor documentation handling.</p>
+            <div class="service-grid-card-meta">
+              <i data-lucide="clock"></i>
+              <span>Estimated Time: 2-3 Days</span>
+            </div>
+            <a href="book-service.html?service=insurance" class="btn btn-primary" style="width: 100%; text-align: center;">Book This Service</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Process Timeline Section -->
+  <section class="process-section">
+    <div class="services-container">
+      <div class="services-header">
+        <span class="section-badge">How We Work</span>
+        <h2 class="section-title">Our Service Process</h2>
+        <p class="section-desc">Experience five structured stages of automotive care engineered for seamless coordination and total customer transparency.</p>
+      </div>
+
+      <div class="process-timeline">
+        <!-- Step 1 -->
+        <div class="process-step">
+          <div class="process-icon-wrapper">
+            <i data-lucide="calendar"></i>
+            <span class="process-step-num">01</span>
+          </div>
+          <h3 class="process-step-title">Book Your Service</h3>
+          <p class="process-step-desc">Schedule your appointment online or contact our luxury workshop directly.</p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="process-step">
+          <div class="process-icon-wrapper">
+            <i data-lucide="search"></i>
+            <span class="process-step-num">02</span>
+          </div>
+          <h3 class="process-step-title">Vehicle Inspection</h3>
+          <p class="process-step-desc">Our lead mechanics run dynamic physical and computer diagnostic sweeps.</p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="process-step">
+          <div class="process-icon-wrapper">
+            <i data-lucide="file-check"></i>
+            <span class="process-step-num">03</span>
+          </div>
+          <h3 class="process-step-title">Estimate Approval</h3>
+          <p class="process-step-desc">Receive a transparent, all-inclusive estimate for parts and labor before work starts.</p>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="process-step">
+          <div class="process-icon-wrapper">
+            <i data-lucide="wrench"></i>
+            <span class="process-step-num">04</span>
+          </div>
+          <h3 class="process-step-title">Repair & Service</h3>
+          <p class="process-step-desc">Certified mechanics work on your car using genuine parts and advanced tools.</p>
+        </div>
+
+        <!-- Step 5 -->
+        <div class="process-step">
+          <div class="process-icon-wrapper">
+            <i data-lucide="car"></i>
+            <span class="process-step-num">05</span>
+          </div>
+          <h3 class="process-step-title">Delivery & Satisfaction</h3>
+          <p class="process-step-desc">Collect your fully detailed, performance-recalibrated luxury automobile.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Our Service Is Better Section -->
+  <section class="services-preview" style="background: var(--primary-black); border-top: 1px solid var(--glass-border);">
+    <div class="services-container">
+      <div class="services-header">
+        <span class="section-badge">The Star Standard</span>
+        <h2 class="section-title">Why Our Service Is Better</h2>
+        <p class="section-desc">We operate on values of trust, absolute mechanical precision, and total accountability since 1993.</p>
+      </div>
+
+      <div class="choose-grid">
+        <!-- 1 -->
+        <div class="choose-card">
+          <div class="choose-icon-wrapper">
+            <i data-lucide="shield-check"></i>
+          </div>
+          <h3 class="choose-card-title">Genuine Spare Parts</h3>
+          <p class="choose-card-desc">We only purchase and install certified original OEM and OES spare parts to protect your vehicle's engineering integrity and warranty.</p>
+        </div>
+
+        <!-- 2 -->
+        <div class="choose-card">
+          <div class="choose-icon-wrapper">
+            <i data-lucide="monitor"></i>
+          </div>
+          <h3 class="choose-card-title">Latest Diagnostic Equipment</h3>
+          <p class="choose-card-desc">Our high-resolution scanners map electronics down to micro-voltage level to pinpoint and isolate deep system faults quickly.</p>
+        </div>
+
+        <!-- 3 -->
+        <div class="choose-card">
+          <div class="choose-icon-wrapper">
+            <i data-lucide="award"></i>
+          </div>
+          <h3 class="choose-card-title">Certified Mechanics</h3>
+          <p class="choose-card-desc">Your automobile is serviced by senior mechanical experts Papau Bhai and Iqbal Bhai, with 33 combined years of premium engineering mastery.</p>
+        </div>
+
+        <!-- 4 -->
+        <div class="choose-card">
+          <div class="choose-icon-wrapper">
+            <i data-lucide="dollar-sign"></i>
+          </div>
+          <h3 class="choose-card-title">Affordable Pricing</h3>
+          <p class="choose-card-desc">Enjoy high-end luxury dealership level repairs at direct workshop prices, backed by absolute transparent estimates.</p>
+        </div>
+
+        <!-- 5 -->
+        <div class="choose-card">
+          <div class="choose-icon-wrapper">
+            <i data-lucide="zap"></i>
+          </div>
+          <h3 class="choose-card-title">Fast Turnaround Time</h3>
+          <p class="choose-card-desc">Our computerized parts storage and streamlined process minimize delay, delivering your automobile faster without compromising safety.</p>
+        </div>
+
+        <!-- 6 -->
+        <div class="choose-card">
+          <div class="choose-icon-wrapper">
+            <i data-lucide="heart"></i>
+          </div>
+          <h3 class="choose-card-title">Customer Satisfaction</h3>
+          <p class="choose-card-desc">We build lifelong relationships based on performance. We treat your vehicle with the respect and meticulous care it deserves.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Emergency Breakdown Assistance Section -->
+  <section class="emergency-section">
+    <div class="emergency-container">
+      <span class="emergency-badge">URGENT CALL OUT</span>
+      <h2 class="emergency-title">24×7 Emergency Breakdown Support</h2>
+      <p class="emergency-desc">We provide swift emergency roadside assistance and rapid on-the-spot repair support for unexpected vehicle mechanical breakdowns.</p>
+      <div class="emergency-actions">
+        <a href="tel:+919106770230" class="btn btn-primary" style="display: inline-flex; align-items: center; gap: 0.75rem;">
+          <i data-lucide="phone"></i> Call Hotline Now
+        </a>
+        <a href="https://wa.me/919106770230" class="btn btn-secondary" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 0.75rem;">
+          <i data-lucide="message-square"></i> WhatsApp Emergency
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Frequently Asked Questions (FAQ) Section -->
+  <section class="faq-section">
+    <div class="faq-container">
+      <div class="services-header">
+        <span class="section-badge">Client Inquiries</span>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-desc">Clear, direct answers to common questions about our operations, warranties, and premium repair protocols.</p>
+      </div>
+
+      <div class="faq-accordion">
+        <!-- Q1 -->
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>How long does a general service take?</h3>
+            <div class="faq-icon-wrapper">
+              <i data-lucide="chevron-down"></i>
+            </div>
+          </div>
+          <div class="faq-answer">
+            <p>A general car service usually takes between 3 to 5 hours. This includes our detailed multi-point safety sweep, filter replacements, fluid checks, adjustments, and a comprehensive final test run.</p>
+          </div>
+        </div>
+
+        <!-- Q2 -->
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>Do you use genuine spare parts?</h3>
+            <div class="faq-icon-wrapper">
+              <i data-lucide="chevron-down"></i>
+            </div>
+          </div>
+          <div class="faq-answer">
+            <p>Yes, we exclusively procure and install certified original OEM (Original Equipment Manufacturer) and OES (Original Equipment Supplier) components. We never install substandard aftermarket duplicates.</p>
+          </div>
+        </div>
+
+        <!-- Q3 -->
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>Can I book online?</h3>
+            <div class="faq-icon-wrapper">
+              <i data-lucide="chevron-down"></i>
+            </div>
+          </div>
+          <div class="faq-answer">
+            <p>Absolutely! You can book your slot in under a minute via our Book Service page. Select your desired service category and fill in your vehicle details, and our managers will contact you immediately to lock in the slot.</p>
+          </div>
+        </div>
+
+        <!-- Q4 -->
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>Do you repair all car brands?</h3>
+            <div class="faq-icon-wrapper">
+              <i data-lucide="chevron-down"></i>
+            </div>
+          </div>
+          <div class="faq-answer">
+            <p>Yes, with over 33 years of professional engineering experience, our master mechanics Papau Bhai and Iqbal Bhai service and calibrate all major domestic and luxury brands—including Maruti, Hyundai, Tata, Honda, Mahindra, Toyota, Skoda, BMW, Audi, Mercedes, and Jaguar.</p>
+          </div>
+        </div>
+
+        <!-- Q5 -->
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>Is roadside assistance available?</h3>
+            <div class="faq-icon-wrapper">
+              <i data-lucide="chevron-down"></i>
+            </div>
+          </div>
+          <div class="faq-answer">
+            <p>Yes! We run a dedicated 24x7 emergency call-out team for immediate roadside help. If your car breaks down, simply call our hotline, and we will dispatch a rescue mechanic or arrange a rapid flatbed tow.</p>
+          </div>
+        </div>
+
+        <!-- Q6 -->
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>Do you provide warranty on repairs?</h3>
+            <div class="faq-icon-wrapper">
+              <i data-lucide="chevron-down"></i>
+            </div>
+          </div>
+          <div class="faq-answer">
+            <p>We stand fully behind our craftsmanship. All premium mechanical repairs come with a robust workmanship warranty, and all genuine OES/OEM parts carry original manufacturer warranties.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Customer Satisfaction Section (Stats & Trust) -->
+  <section class="trust-section" id="statsSection">
+    <div class="faq-container">
+      <div class="trust-rating">
+        <i data-lucide="star" style="fill: var(--accent-gold);"></i>
+        <i data-lucide="star" style="fill: var(--accent-gold);"></i>
+        <i data-lucide="star" style="fill: var(--accent-gold);"></i>
+        <i data-lucide="star" style="fill: var(--accent-gold);"></i>
+        <i data-lucide="star" style="fill: var(--accent-gold);"></i>
+      </div>
+      <p class="trust-quote">"Your trust is our biggest achievement."</p>
+
+      <div class="stats-grid" style="border: 1px solid var(--glass-border); border-radius: 20px; background: var(--glass-bg); padding: 3rem; margin-top: 2rem;">
+        <!-- Stat 1 -->
+        <div class="stat-item" style="text-align: center;">
+          <div class="stat-number" style="font-size: 3rem; font-weight: 900; color: var(--accent-gold); font-family: var(--font-display);" data-target="10000">0</div>
+          <div style="font-size: 0.75rem; text-transform: uppercase; color: var(--secondary-white); letter-spacing: 0.15em; font-weight: 600; margin-top: 0.5rem;">Happy Customers</div>
+        </div>
+
+        <!-- Stat 2 -->
+        <div class="stat-item" style="text-align: center;">
+          <div class="stat-number" style="font-size: 3rem; font-weight: 900; color: var(--accent-gold); font-family: var(--font-display);" data-target="25000">0</div>
+          <div style="font-size: 0.75rem; text-transform: uppercase; color: var(--secondary-white); letter-spacing: 0.15em; font-weight: 600; margin-top: 0.5rem;">Cars Serviced</div>
+        </div>
+
+        <!-- Stat 3 -->
+        <div class="stat-item" style="text-align: center;">
+          <div class="stat-number" style="font-size: 3rem; font-weight: 900; color: var(--accent-gold); font-family: var(--font-display);" data-target="33">0</div>
+          <div style="font-size: 0.75rem; text-transform: uppercase; color: var(--secondary-white); letter-spacing: 0.15em; font-weight: 600; margin-top: 0.5rem;">Years Experience</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call To Action Section -->
+  <section class="cta-banner">
+    <div class="cta-bg"></div>
+    <div class="cta-overlay"></div>
+    <div class="cta-content">
+      <h2 class="cta-title">Need Professional Car Service?</h2>
+      <p class="cta-desc">Book your appointment today and let our highly experienced mechanics take care of your vehicle with dealers-grade precision.</p>
+      <div class="cta-buttons">
+        <a href="book-service.html" class="btn btn-primary">Book Service</a>
+        <a href="contact.html" class="btn btn-secondary">Contact Us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Premium Dark Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div>
+        <h3 class="footer-brand-title">STAR AUTO SERVICE</h3>
+        <p class="footer-brand-desc">
+          Best Service Center For All Car Companies. Over 33 years of premium mechanical rebuilding, digital engine calibration, and absolute reliability. Serving with perfection and passion.
+        </p>
+        <div class="footer-socials">
+          <a href="#" class="footer-social-link" aria-label="Facebook"><i data-lucide="facebook"></i></a>
+          <a href="#" class="footer-social-link" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+          <a href="#" class="footer-social-link" aria-label="YouTube"><i data-lucide="youtube"></i></a>
+        </div>
+      </div>
+
+      <div>
+        <h4 class="footer-heading">Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="book-service.html">Book Service</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-heading">Business Hours</h4>
+        <ul class="footer-links">
+          <li class="footer-contact-item">
+            <i data-lucide="clock"></i>
+            <div class="footer-contact-text">
+              <strong>Monday - Saturday</strong>
+              09:00 AM - 08:00 PM
+            </div>
+          </li>
+          <li class="footer-contact-item">
+            <i data-lucide="info"></i>
+            <div class="footer-contact-text">
+              <strong>Sunday</strong>
+              Emergency Call Only
+            </div>
+          </li>
+          <li class="footer-contact-item">
+            <i data-lucide="map-pin"></i>
+            <div class="footer-contact-text">
+              <strong>Location</strong>
+              Surat, Gujarat, India
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; <span class="current-year">2026</span> Star Auto Service. All Rights Reserved.</p>
+      <p class="footer-thankyou">Thank You For Visiting Our Website</p>
+      <p class="footer-credit">Developed By <span class="gold-text">FAIZ KHA</span></p>
+    </div>
+  </footer>
+
+  <!-- Floating Quick Actions -->
+  <div class="floating-actions">
+    <a href="tel:+919106770230" class="floating-btn floating-call" title="Call Us Now">
+      <i data-lucide="phone"></i>
+    </a>
+    <a href="https://wa.me/919106770230" class="floating-btn floating-whatsapp" target="_blank" rel="noopener noreferrer" title="WhatsApp Chat">
+      <i data-lucide="message-square"></i>
+    </a>
+    <button class="floating-btn floating-backtop" id="backTopBtn" title="Back To Top">
+      <i data-lucide="arrow-up"></i>
+    </button>
+  </div>
+
+  <!-- Lucide Icon Libraries and Scripts -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="/js/script.js"></script>
+</body>
+</html>

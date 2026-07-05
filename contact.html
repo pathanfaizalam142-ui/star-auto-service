@@ -1,0 +1,1485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Star Auto Service | Premium Workshop In Ahmedabad</title>
+  <meta name="description" content="Get in touch with Star Auto Service in Ahmedabad, Gujarat. Reach out to Papau Bhai or Iqbal Bhai for high-precision vehicle service, diagnostics, and overhauls. 33 years of excellence.">
+  <meta name="keywords" content="Star Auto Service contact, car workshop Ahmedabad, Papau Bhai contact, Iqbal Bhai, car repair Ahmedabad, premium auto service">
+  <link rel="stylesheet" href="/css/style.css">
+  
+  <!-- Embedded custom scoped styles for advanced contact components to guarantee absolute pixel-perfect visual polish -->
+  <style>
+    /* Premium Contact Layout Extensions */
+    .contact-hero-banner {
+      background-image: url('https://images.unsplash.com/photo-1617814076367-b759c7d7e738?q=80&w=1200&auto=format&fit=crop');
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3.5rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 5rem 2rem;
+    }
+
+    @media (max-width: 992px) {
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        padding: 4rem 1.5rem;
+      }
+    }
+
+    /* Elegant Contact Info Cards Group */
+    .info-cards-container {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .premium-info-card {
+      background: var(--glass-bg);
+      border: 1px solid var(--glass-border);
+      border-radius: 16px;
+      padding: 2rem;
+      display: flex;
+      gap: 1.5rem;
+      align-items: flex-start;
+      transition: var(--transition-luxury);
+      box-shadow: var(--shadow-luxury);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .premium-info-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at 0% 0%, rgba(197, 168, 128, 0.05), transparent 60%);
+      pointer-events: none;
+    }
+
+    .premium-info-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(197, 168, 128, 0.25);
+      box-shadow: var(--shadow-gold);
+    }
+
+    .info-card-icon {
+      width: 50px;
+      height: 50px;
+      border-radius: 12px;
+      background: rgba(197, 168, 128, 0.08);
+      border: 1px solid rgba(197, 168, 128, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent-gold);
+      flex-shrink: 0;
+      transition: var(--transition-fast);
+    }
+
+    .premium-info-card:hover .info-card-icon {
+      background: var(--accent-gold);
+      color: var(--primary-black);
+      transform: scale(1.05);
+    }
+
+    .info-card-content h3 {
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--secondary-white);
+      margin-bottom: 0.5rem;
+    }
+
+    .info-card-content p, .info-card-content span {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      line-height: 1.6;
+      font-weight: 300;
+    }
+
+    .info-card-link {
+      color: var(--text-light);
+      font-weight: 500;
+      transition: var(--transition-fast);
+      text-decoration: none;
+    }
+
+    .info-card-link:hover {
+      color: var(--accent-gold);
+    }
+
+    /* Workshop Location Details Container */
+    .workshop-address-section {
+      background: linear-gradient(180deg, var(--primary-black) 0%, var(--primary-dark) 100%);
+      border-top: 1px solid var(--glass-border);
+      border-bottom: 1px solid var(--glass-border);
+      padding: 6rem 2rem;
+      position: relative;
+    }
+
+    .address-details-wrapper {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    @media (max-width: 992px) {
+      .address-details-wrapper {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+    }
+
+    .address-text-block {
+      background: var(--glass-bg);
+      border: 1px solid var(--glass-border);
+      border-radius: 20px;
+      padding: 3rem;
+      box-shadow: var(--shadow-luxury);
+    }
+
+    .address-tag {
+      display: inline-block;
+      color: var(--accent-gold);
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      margin-bottom: 1rem;
+    }
+
+    .address-title {
+      font-family: var(--font-display);
+      font-size: 2rem;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+      color: var(--secondary-white);
+    }
+
+    .address-subtitle {
+      font-size: 1.1rem;
+      color: var(--secondary-silver);
+      margin-bottom: 1.5rem;
+      font-weight: 400;
+    }
+
+    .address-location {
+      font-size: 1rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: 2.5rem;
+      font-weight: 300;
+    }
+
+    /* Beautiful Social Media Icons Grid */
+    .social-platforms-grid {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .social-icon-btn {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid var(--glass-border);
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: var(--transition-luxury);
+      text-decoration: none;
+    }
+
+    .social-icon-btn:hover {
+      border-color: var(--accent-gold);
+      color: var(--accent-gold);
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 4px 15px rgba(197, 168, 128, 0.15);
+      background: rgba(197, 168, 128, 0.03);
+    }
+
+    /* Interactive Accordion for FAQ Section */
+    .faq-wrapper {
+      padding: 6rem 2rem;
+      background: var(--primary-black);
+      position: relative;
+    }
+
+    .faq-headline-group {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+
+    /* Google Reviews Section Testimonials */
+    .reviews-section {
+      padding: 6rem 2rem;
+      background: linear-gradient(180deg, var(--primary-dark) 0%, var(--primary-black) 100%);
+      border-top: 1px solid var(--glass-border);
+      position: relative;
+    }
+
+    .reviews-cards-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 992px) {
+      .reviews-cards-row {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .reviews-cards-row {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .google-review-card {
+      background: var(--glass-bg);
+      border: 1px solid var(--glass-border);
+      border-radius: 16px;
+      padding: 2rem;
+      box-shadow: var(--shadow-luxury);
+      transition: var(--transition-luxury);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .google-review-card:hover {
+      border-color: rgba(197, 168, 128, 0.2);
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-gold);
+    }
+
+    .review-stars-wrap {
+      color: #ffb400; /* Star Golden Orange color */
+      display: flex;
+      gap: 0.25rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .review-body-text {
+      color: var(--text-light);
+      font-size: 0.9rem;
+      line-height: 1.6;
+      font-style: italic;
+      margin-bottom: 2rem;
+      font-weight: 300;
+    }
+
+    .review-user-info {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .review-user-avatar {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent-gold) 0%, #e5c38c 100%);
+      color: var(--primary-black);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-display);
+      font-weight: 900;
+      font-size: 0.95rem;
+    }
+
+    .review-user-name {
+      font-family: var(--font-display);
+      font-weight: 700;
+      color: var(--secondary-white);
+      font-size: 0.9rem;
+    }
+
+    .review-user-date {
+      color: var(--text-muted);
+      font-size: 0.75rem;
+      display: block;
+      margin-top: 0.15rem;
+    }
+
+    /* Business Hours Interactive Grid */
+    .hours-showcase-section {
+      padding: 6rem 2rem;
+      background: var(--primary-black);
+      border-top: 1px solid var(--glass-border);
+    }
+
+    .hours-layout {
+      max-width: 1100px;
+      margin: 0 auto;
+      background: var(--glass-bg);
+      border: 1px solid var(--glass-border);
+      border-radius: 20px;
+      padding: 3rem;
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    @media (max-width: 992px) {
+      .hours-layout {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        padding: 2rem;
+      }
+    }
+
+    .hours-table-container {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .hours-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 1.5rem;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.01);
+      border: 1px solid rgba(255, 255, 255, 0.02);
+      transition: var(--transition-fast);
+    }
+
+    .hours-row.active-today {
+      background: rgba(197, 168, 128, 0.05);
+      border-color: var(--accent-gold);
+      box-shadow: 0 0 15px rgba(197, 168, 128, 0.1);
+    }
+
+    .hours-row.active-today .day-name {
+      color: var(--accent-gold);
+      font-weight: 700;
+    }
+
+    .hours-row.active-today .time-span {
+      color: var(--secondary-white);
+      font-weight: 700;
+    }
+
+    .day-name {
+      font-family: var(--font-display);
+      text-transform: uppercase;
+      font-size: 0.85rem;
+      color: var(--secondary-silver);
+      letter-spacing: 0.05em;
+    }
+
+    .time-span {
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    /* Newsletter Premium Section */
+    .newsletter-section {
+      padding: 6rem 2rem;
+      background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-black) 100%);
+      border-top: 1px solid var(--glass-border);
+      position: relative;
+    }
+
+    .newsletter-glass-panel {
+      max-width: 950px;
+      margin: 0 auto;
+      background: radial-gradient(circle at 0% 0%, rgba(197, 168, 128, 0.05) 0%, transparent 60%);
+      border: 1px solid var(--glass-border);
+      border-radius: 24px;
+      padding: 4rem;
+      text-align: center;
+      box-shadow: var(--shadow-luxury);
+    }
+
+    @media (max-width: 768px) {
+      .newsletter-glass-panel {
+        padding: 2.5rem 1.5rem;
+      }
+    }
+
+    .newsletter-heading {
+      font-family: var(--font-display);
+      font-size: 2.2rem;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+      color: var(--secondary-white);
+      letter-spacing: 0.05em;
+    }
+
+    .newsletter-desc {
+      color: var(--text-muted);
+      font-size: 1rem;
+      max-width: 600px;
+      margin: 0 auto 2.5rem auto;
+      font-weight: 300;
+      line-height: 1.6;
+    }
+
+    .newsletter-form-wrapper {
+      max-width: 550px;
+      margin: 0 auto;
+      display: flex;
+      gap: 1rem;
+    }
+
+    @media (max-width: 576px) {
+      .newsletter-form-wrapper {
+        flex-direction: column;
+        gap: 1rem;
+      }
+    }
+
+    .newsletter-input {
+      flex-grow: 1;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--glass-border);
+      border-radius: 10px;
+      padding: 1.1rem 1.5rem;
+      color: var(--text-light);
+      font-size: 0.95rem;
+      outline: none;
+      transition: var(--transition-fast);
+    }
+
+    .newsletter-input:focus {
+      border-color: var(--accent-gold);
+      background: rgba(255, 255, 255, 0.06);
+      box-shadow: 0 0 10px rgba(197, 168, 128, 0.1);
+    }
+
+    /* Floating Multi-Buttons Container override */
+    .floating-actions-extended {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      z-index: 99;
+    }
+
+    .floating-call-btn {
+      background-color: var(--accent-gold);
+      color: var(--primary-black) !important;
+      border: 1px solid var(--accent-gold-hover);
+    }
+
+    .floating-call-btn:hover {
+      background-color: var(--accent-gold-hover);
+      transform: scale(1.1);
+    }
+
+    /* Modal dialog styling extensions */
+    .modal-backdrop {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(5, 5, 5, 0.9);
+      backdrop-filter: blur(8px);
+      z-index: 1000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.4s ease, visibility 0.4s ease;
+    }
+
+    .modal-backdrop.show {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .success-modal {
+      background: var(--primary-charcoal);
+      border: 1px solid var(--glass-border);
+      border-radius: 20px;
+      padding: 3rem;
+      max-width: 500px;
+      width: 90%;
+      text-align: center;
+      box-shadow: var(--shadow-luxury);
+      transform: scale(0.8);
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .modal-backdrop.show .success-modal {
+      transform: scale(1);
+    }
+
+    .success-modal-icon {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: rgba(37, 211, 102, 0.1);
+      border: 1px solid #25d366;
+      color: #25d366;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.5rem;
+      margin: 0 auto 1.5rem auto;
+    }
+
+    .success-modal-title {
+      font-family: var(--font-display);
+      font-size: 1.8rem;
+      text-transform: uppercase;
+      color: var(--secondary-white);
+      margin-bottom: 1rem;
+    }
+
+    .success-modal-desc {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin-bottom: 2rem;
+      font-weight: 300;
+    }
+
+    /* Feedback validation style overrides for contact fields */
+    .form-group-relative .validation-feedback {
+      font-size: 0.72rem;
+      font-family: var(--font-mono);
+      margin-top: 0.3rem;
+      display: block;
+    }
+
+    .validation-feedback.invalid {
+      color: #dc3545;
+    }
+
+    .validation-feedback.valid {
+      color: #25d366;
+    }
+  </style>
+  <!-- Inline Theme Loader to prevent visual flash of dark mode -->
+  <script>
+    if (localStorage.getItem('starAutoTheme') === 'light') {
+      document.documentElement.classList.add('light-theme');
+    }
+  </script>
+</head>
+<body>
+
+  <!-- Loading Animation -->
+  <div id="loader">
+    <div class="loader-ring"></div>
+    <div class="loader-logo">STAR AUTO</div>
+  </div>
+
+  <!-- Header Info Strip (Always Present) -->
+  <div class="header-strip">
+    <div class="header-mechanic">
+      <div class="icon-wrapper">
+        <i data-lucide="phone"></i>
+      </div>
+      <div>
+        <span class="header-mechanic-label">Papau Bhai</span>
+        <a href="tel:+919106770230" class="header-mechanic-phone">+91 9106770230</a>
+      </div>
+    </div>
+    <div class="header-logo-area">
+      <h1 class="header-logo-title">STAR AUTO SERVICE</h1>
+      <div class="header-logo-experience">33 Years Experience</div>
+      <div class="header-logo-tagline">Best Service Center For All Car Companies</div>
+    </div>
+    <div class="header-mechanic">
+      <div class="icon-wrapper">
+        <i data-lucide="phone"></i>
+      </div>
+      <div>
+        <span class="header-mechanic-label">Iqbal Bhai</span>
+        <a href="tel:+919909698474" class="header-mechanic-phone">+91 9909698474</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sticky Main Navbar -->
+  <nav class="navbar">
+    <a href="index.html" class="nav-brand">
+      <i data-lucide="wrench" class="gold-text"></i> STAR AUTO <span>SERVICE</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="book-service.html">Book Service</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+    <div class="nav-cta" style="display: flex; align-items: center; gap: 1rem;">
+      <button id="themeToggleBtn" class="theme-toggle-btn" aria-label="Toggle Dark/Light Mode" title="Toggle Theme">
+        <i data-lucide="sun" class="sun-icon"></i>
+        <i data-lucide="moon" class="moon-icon"></i>
+      </button>
+      <a href="book-service.html" class="btn btn-primary">Book Slot</a>
+    </div>
+    <button class="hamburger" id="hamburgerBtn" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Overlay Navigation -->
+  <div class="mobile-nav-overlay" id="mobileNavOverlay">
+    <div class="mobile-theme-toggle-wrap" style="padding: 2rem 1.5rem 1rem 1.5rem; text-align: center; border-bottom: 1px solid var(--glass-border); display: flex; justify-content: center;">
+      <button id="mobileThemeToggleBtn" class="theme-toggle-btn" aria-label="Toggle Dark/Light Mode" style="display: flex; gap: 0.5rem; width: auto; padding: 0 1.5rem;">
+        <span style="font-size: 0.8rem; font-family: var(--font-mono); color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; display: inline-block; margin-right: 0.25rem;">Theme:</span>
+        <i data-lucide="sun" class="sun-icon"></i>
+        <i data-lucide="moon" class="moon-icon"></i>
+      </button>
+    </div>
+    <ul class="mobile-nav-links" style="margin-top: 1.5rem;">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="book-service.html">Book Service</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+      <li style="margin-top: 1rem;">
+        <a href="book-service.html" class="btn btn-primary" style="font-size: 1rem; padding: 0.75rem 2rem; color: #050505;">Book Slot Now</a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Page Header Title Section (Hero Banner) -->
+  <header class="page-header">
+    <div class="page-header-bg contact-hero-banner"></div>
+    <div class="page-header-overlay"></div>
+    <div class="page-header-content">
+      <h1 class="page-title">CONTACT STAR AUTO SERVICE</h1>
+      <p class="page-header-subtitle">We're Always Ready To Help You</p>
+      <div class="breadcrumbs" style="margin-top: 1.5rem;">
+        <a href="index.html">Home</a>
+        <span>&rarr;</span>
+        <span>Contact</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Contact Layout Section -->
+  <section class="form-section" style="max-width: 1200px; padding: 6rem 2rem; background: var(--primary-black);">
+    <div class="services-header" style="text-align: center; margin-bottom: 4rem;">
+      <span class="section-badge">Get In Touch</span>
+      <h2 class="section-title">Reach Out To Our Experts</h2>
+      <p class="section-desc" style="max-width: 700px; margin: 0 auto;">
+        Have any engineering inquiries, performance concerns, or spare parts requirements? Drop us a line below or contact our masters directly.
+      </p>
+    </div>
+
+    <div class="contact-grid">
+      
+      <!-- Left Column: Contact Cards -->
+      <div class="info-cards-container">
+        
+        <!-- Workshop & Experience Card -->
+        <div class="premium-info-card">
+          <div class="info-card-icon">
+            <i data-lucide="award"></i>
+          </div>
+          <div class="info-card-content">
+            <h3>Workshop Mastery</h3>
+            <p style="font-weight: 500; color: var(--secondary-white); margin-bottom: 0.25rem;">STAR AUTO SERVICE</p>
+            <p>Providing high-precision automobile engineering with absolute mechanical reliability.</p>
+            <span class="gold-text" style="font-weight: 600; font-family: var(--font-mono); font-size: 0.8rem; margin-top: 0.5rem; display: block;">33 YEARS CERTIFIED EXPERIENCE</span>
+          </div>
+        </div>
+
+        <!-- Mechanics Direct Hotlines -->
+        <div class="premium-info-card">
+          <div class="info-card-icon">
+            <i data-lucide="phone-call"></i>
+          </div>
+          <div class="info-card-content">
+            <h3>Direct Hotline Consultation</h3>
+            <p style="margin-bottom: 0.75rem;">Speak directly with our chief master mechanics for rapid support:</p>
+            <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+              <div>
+                <strong>Papau Bhai : </strong> 
+                <a href="tel:+919106770230" class="info-card-link gold-text font-mono">+91 9106770230</a>
+              </div>
+              <div>
+                <strong>Iqbal Bhai : </strong> 
+                <a href="tel:+919909698474" class="info-card-link gold-text font-mono">+91 9909698474</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Working Hours Card -->
+        <div class="premium-info-card">
+          <div class="info-card-icon">
+            <i data-lucide="clock"></i>
+          </div>
+          <div class="info-card-content">
+            <h3>Working Hours</h3>
+            <div style="display: flex; flex-direction: column; gap: 0.25rem; margin-top: 0.25rem;">
+              <p><strong style="color: var(--secondary-white);">Monday – Saturday : </strong> 9:00 AM – 8:00 PM</p>
+              <p><strong style="color: var(--secondary-white);">Sunday : </strong> Emergency Support Only</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Email Support Card -->
+        <div class="premium-info-card">
+          <div class="info-card-icon">
+            <i data-lucide="mail"></i>
+          </div>
+          <div class="info-card-content">
+            <h3>Digital Support</h3>
+            <p style="margin-bottom: 0.5rem;">For corporate accounts, multi-car fleet diagnostics, or billing inquiries:</p>
+            <a href="mailto:starautoservice@gmail.com" class="info-card-link gold-text font-mono">starautoservice@gmail.com</a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Right Column: Interactive Luxury Contact Form -->
+      <div class="luxury-form" style="padding: 3.5rem; display: flex; flex-direction: column; justify-content: center;">
+        <h3 class="form-column-title" style="margin-bottom: 1.5rem; text-align: left; border-bottom: none; padding-bottom: 0;">
+          <i data-lucide="send" style="color: var(--accent-gold); width: 22px;"></i> Send Us A Message
+        </h3>
+        <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 2.5rem; font-weight: 300;">
+          Required fields are marked with an asterisk (*). Ensure your contact details are accurate so we can reach you quickly.
+        </p>
+
+        <form id="contactForm" novalidate style="display: flex; flex-direction: column; gap: 1.5rem;">
+          
+          <!-- Full Name -->
+          <div class="form-group form-group-relative">
+            <label class="form-label" for="contactName">Full Name *</label>
+            <input class="form-input" type="text" id="contactName" name="name" placeholder="Minimum 3 characters" required>
+            <div class="validation-feedback" id="contactNameFeedback"></div>
+          </div>
+
+          <!-- Mobile Number -->
+          <div class="form-group form-group-relative">
+            <label class="form-label" for="contactPhone">Mobile Number *</label>
+            <input class="form-input" type="tel" id="contactPhone" name="phone" placeholder="10-digit Indian Mobile" required>
+            <div class="validation-feedback" id="contactPhoneFeedback"></div>
+          </div>
+
+          <!-- Email Address -->
+          <div class="form-group form-group-relative">
+            <label class="form-label" for="contactEmail">Email Address</label>
+            <input class="form-input" type="email" id="contactEmail" name="email" placeholder="e.g. contact@example.com">
+            <div class="validation-feedback" id="contactEmailFeedback"></div>
+          </div>
+
+          <!-- Subject -->
+          <div class="form-group form-group-relative">
+            <label class="form-label" for="contactSubject">Subject *</label>
+            <input class="form-input" type="text" id="contactSubject" name="subject" placeholder="e.g. Engine noise, Brake replacement estimate" required>
+            <div class="validation-feedback" id="contactSubjectFeedback"></div>
+          </div>
+
+          <!-- Message -->
+          <div class="form-group form-group-relative">
+            <label class="form-label" for="contactMessage">Message *</label>
+            <textarea class="form-input" id="contactMessage" name="message" rows="4" placeholder="Describe your vehicle complaints or service requirements (Minimum 20 characters)..." required></textarea>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 0.35rem;">
+              <div class="validation-feedback" id="contactMessageFeedback" style="margin-top: 0;"></div>
+              <div class="char-counter" id="contactMessageCharCounter" style="font-size: 0.7rem; color: var(--text-muted); font-family: var(--font-mono);">Characters: 0/1000</div>
+            </div>
+          </div>
+
+          <!-- Submit Button Wrapper -->
+          <div class="form-submit-wrapper" style="text-align: left; margin-top: 1.5rem;">
+            <button type="submit" id="submitContactBtn" class="btn btn-primary btn-ripple" style="padding: 1.1rem 3.5rem; display: inline-flex; align-items: center; gap: 0.75rem;" disabled>
+              <i data-lucide="send"></i> 
+              <span>SUBMIT MESSAGE</span>
+              <span class="submit-spinner" id="contactBtnSpinner"></span>
+            </button>
+          </div>
+
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Workshop Address & Maps Section -->
+  <section class="workshop-address-section">
+    <div class="address-details-wrapper">
+      
+      <!-- Left text box -->
+      <div class="address-text-block">
+        <span class="address-tag">Dealership Location</span>
+        <h2 class="address-title">STAR AUTO SERVICE</h2>
+        <p class="address-subtitle">Professional Automobile Service Center</p>
+        <p class="address-location">
+          Opposite Royal Arcade, S.G. Highway, Thaltej,<br>
+          Ahmedabad, Gujarat - 380054, India
+        </p>
+        
+        <div style="border-top: 1px solid rgba(255, 255, 255, 0.05); padding-top: 1.5rem; margin-bottom: 2rem;">
+          <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6;">
+            We are centrally located in Ahmedabad on S.G. Highway for extreme convenience and rapid breakdown towing access. Bring your sedan, SUV, or luxury car to the masters today.
+          </p>
+        </div>
+
+        <a href="https://maps.google.com/?q=Star+Auto+Service+Ahmedabad+Gujarat+India" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-ripple" style="display: inline-flex; align-items: center; gap: 0.75rem; padding: 0.85rem 1.75rem;">
+          <i data-lucide="navigation"></i> 
+          <span>Get Directions</span>
+        </a>
+      </div>
+
+      <!-- Right Google Map iframe Container -->
+      <div class="map-container" style="height: 480px; border: 1px solid rgba(197, 168, 128, 0.15);">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14686.79165399581!2d72.5013621!3d23.022505!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e848aba5bd449%3A0x4fccd7d11d111111!2sS.G.%20Highway%2C%20Thaltej%20Ahmedabad%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1719900000000!5m2!1sen!2sin" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Business Hours Showcase Grid Section -->
+  <section class="hours-showcase-section">
+    <div class="hours-layout">
+      
+      <div>
+        <span class="section-badge" style="margin-bottom: 1rem;">Service Hours</span>
+        <h2 class="section-title" style="font-size: 2.2rem; margin-bottom: 1.25rem; text-align: left;">Timely Support When You Need It</h2>
+        <p class="section-desc" style="text-align: left; margin-bottom: 2rem;">
+          Our state-of-the-art facility maintains regular shifts for high efficiency. For emergency highway breakdowns or extreme mechanical towing, Papau Bhai and Iqbal Bhai remain reachable 24x7 on our phone hotlines.
+        </p>
+        
+        <div style="display: flex; gap: 1.5rem; align-items: center; background: rgba(255, 255, 255, 0.02); padding: 1.5rem; border-radius: 12px; border: 1px solid var(--glass-border);">
+          <i data-lucide="info" class="gold-text" style="width: 24px; height: 24px; flex-shrink: 0;"></i>
+          <p style="font-size: 0.85rem; color: var(--text-light); line-height: 1.6; margin: 0;">
+            <strong class="gold-text">Sunday Service Policy:</strong> On Sundays we operate strictly for critical engine breakdowns and pre-scheduled emergency calibrations. Call beforehand.
+          </p>
+        </div>
+      </div>
+
+      <div class="hours-table-container">
+        <div class="hours-row" id="dayHoursMonday">
+          <span class="day-name">Monday</span>
+          <span class="time-span">9:00 AM – 8:00 PM</span>
+        </div>
+        <div class="hours-row" id="dayHoursTuesday">
+          <span class="day-name">Tuesday</span>
+          <span class="time-span">9:00 AM – 8:00 PM</span>
+        </div>
+        <div class="hours-row" id="dayHoursWednesday">
+          <span class="day-name">Wednesday</span>
+          <span class="time-span">9:00 AM – 8:00 PM</span>
+        </div>
+        <div class="hours-row" id="dayHoursThursday">
+          <span class="day-name">Thursday</span>
+          <span class="time-span">9:00 AM – 8:00 PM</span>
+        </div>
+        <div class="hours-row" id="dayHoursFriday">
+          <span class="day-name">Friday</span>
+          <span class="time-span">9:00 AM – 8:00 PM</span>
+        </div>
+        <div class="hours-row" id="dayHoursSaturday">
+          <span class="day-name">Saturday</span>
+          <span class="time-span">9:00 AM – 8:00 PM</span>
+        </div>
+        <div class="hours-row" id="dayHoursSunday" style="border-left: 2px solid #dc3545;">
+          <span class="day-name" style="color: #dc3545;">Sunday</span>
+          <span class="time-span" style="color: #dc3545; font-weight: 600;">Emergency Support Only</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Google Reviews Testimonials Section -->
+  <section class="reviews-section">
+    <div class="faq-headline-group">
+      <span class="section-badge">Client Trust</span>
+      <h2 class="section-title">Google Customer Reviews</h2>
+      <p class="section-desc" style="max-width: 600px; margin: 0 auto;">
+        Real ratings left by our luxury automobile owners in Ahmedabad and Gujarat.
+      </p>
+    </div>
+
+    <div class="reviews-cards-row">
+      
+      <!-- Review Card 1 -->
+      <div class="google-review-card">
+        <div>
+          <div class="review-stars-wrap">
+            <i data-lucide="star" style="fill: currentColor; width: 16px; height: 16px;"></i>
+            <i data-lucide="star" style="fill: currentColor; width: 16px; height: 16px;"></i>
+            <i data-lucide="star" style="fill: currentColor; width: 16px; height: 16px;"></i>
+            <i data-lucide="star" style="fill: currentColor; width: 16px; height: 16px;"></i>
+            <i data-lucide="star" style="fill: currentColor; width: 16px; height: 16px;"></i>
+          </div>
+          <p class="review-body-text">
+            "Papau Bhai is a absolute genius! My BMW had an engine sound that two other authorized dealerships could not diagnose. He identified the timing issue in 10 minutes and repaired it flawlessly. Highly recommended!"
+          </p>
+        </div>
+        <div class="review-user-info">
+          <div class="review-user-avatar">NK</div>
+          <div>
+            <span class="review-user-name">Nitin Patel</span>
+            <span class="review-user-date">Ahmedabad • 1 Week Ago</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Review Card 2 -->
+      <div class="google-review-card">
+        <div>
+          <div class="review-stars-wrap">
+            <i data-lucide="star" style="fill: currentColor; width: 16px; height: 16px;"></i>
+            <i data-lucide="star" style="fill: currentColor; width: 16px; height: 16px;"></i>
+            <i data-lucide="star" style="fill: currentColor; width: 16px; height: 16px;"></i>
+            <i data-lucide="star" style="fill: currentColor; width: 16px; height: 16px;"></i>
+            <i data-lucide="star" style="fill: currentColor; width: 16px; height: 16px;"></i>
+          </div>
+          <p class="review-body-text">
+            "Great service quality and extremely transparent pricing. Iqbal Bhai provided a complete diagnostic readout for my Fortuner and explained all the work needed before touching the car. Excellent pickup-drop service."
+          </p>
+        </div>
+        <div class="review-user-info">
+          <div class="review-user-avatar">RJ</div>
+          <div>
+            <span class="review-user-name">Rajesh Jadeja</span>
+            <span class="review-user-date">S.G. Road Client • 3 Days Ago</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Review Card 3 -->
+      <div class="google-review-card">
+        <div>
+          <div class="review-stars-wrap">
+            <i data-lucide="star" style="fill: currentColor; width: 16px; height: 16px;"></i>
+            <i data-lucide="star" style="fill: currentColor; width: 16px; height: 16px;"></i>
+            <i data-lucide="star" style="fill: currentColor; width: 16px; height: 16px;"></i>
+            <i data-lucide="star" style="fill: currentColor; width: 16px; height: 16px;"></i>
+            <i data-lucide="star" style="fill: currentColor; width: 16px; height: 16px;"></i>
+          </div>
+          <p class="review-body-text">
+            "33 years of experience is clearly visible in their workmanship. They repaired my automatic transmission and completed suspension overhaul beautifully. The car feels brand new. Thank you Faiz for booking slot!"
+          </p>
+        </div>
+        <div class="review-user-info">
+          <div class="review-user-avatar">SM</div>
+          <div>
+            <span class="review-user-name">Sanjay Mehta</span>
+            <span class="review-user-date">Ahmedabad • 2 Weeks Ago</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Animated Accordion FAQ Section -->
+  <section class="faq-wrapper">
+    <div class="faq-headline-group">
+      <span class="section-badge">Any Questions?</span>
+      <h2 class="section-title">Frequently Asked Questions</h2>
+      <p class="section-desc" style="max-width: 600px; margin: 0 auto;">
+        Get quick answers regarding parts, warranty, and our mechanical services.
+      </p>
+    </div>
+
+    <div class="faq-container">
+      <div class="faq-accordion" id="contactFaqAccordion">
+        
+        <!-- FAQ 1 -->
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>Do you service all car brands?</h3>
+            <div class="faq-icon-wrapper">
+              <i data-lucide="chevron-down"></i>
+            </div>
+          </div>
+          <div class="faq-answer">
+            <p>
+              Yes! With our 33 years of engineering mastery, we service all major luxury and consumer car companies including Maruti Suzuki, Hyundai, Honda, Toyota, Tata, BMW, Audi, Mercedes-Benz, and more.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>Do you provide pickup &amp; drop?</h3>
+            <div class="faq-icon-wrapper">
+              <i data-lucide="chevron-down"></i>
+            </div>
+          </div>
+          <div class="faq-answer">
+            <p>
+              Absolutely. We offer convenient, safe vehicle pickup and drop-off services across the region. You can select this option directly when booking online.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>How long does servicing take?</h3>
+            <div class="faq-icon-wrapper">
+              <i data-lucide="chevron-down"></i>
+            </div>
+          </div>
+          <div class="faq-answer">
+            <p>
+              A standard general service or oil change takes about 2 to 4 hours. Major mechanical rebuilding or engine diagnostics can take 1 to 2 days. We always provide a clear time estimate beforehand.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>Are genuine parts used?</h3>
+            <div class="faq-icon-wrapper">
+              <i data-lucide="chevron-down"></i>
+            </div>
+          </div>
+          <div class="faq-answer">
+            <p>
+              Yes, we exclusively source and install 100% genuine OEM spare parts directly from certified distributors, ensuring your vehicle's safety, warranty, and resale value.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 5 -->
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>Can I book online?</h3>
+            <div class="faq-icon-wrapper">
+              <i data-lucide="chevron-down"></i>
+            </div>
+          </div>
+          <div class="faq-answer">
+            <p>
+              Yes! You can reserve your workshop slot in real-time on our "Book Service" page, which integrates live slot verification and immediate booking log confirmation.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 6 -->
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>Do you provide warranty?</h3>
+            <div class="faq-icon-wrapper">
+              <i data-lucide="chevron-down"></i>
+            </div>
+          </div>
+          <div class="faq-answer">
+            <p>
+              Yes, all our professional mechanical overhauls, diagnostic repairs, and premium spare parts come with a workshop warranty of up to 6 months.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter Section (Stay Updated) -->
+  <section class="newsletter-section">
+    <div class="newsletter-glass-panel">
+      <span class="section-badge" style="margin-bottom: 1rem;">Newsletter</span>
+      <h2 class="newsletter-heading">Stay Updated</h2>
+      <p class="newsletter-desc">
+        Subscribe to our newsletter to receive automotive maintenance tips, seasonal offers, and repair advice from Papau Bhai &amp; Iqbal Bhai.
+      </p>
+      
+      <form id="newsletterForm" novalidate>
+        <div class="newsletter-form-wrapper">
+          <input type="email" id="newsletterEmail" placeholder="Enter your email address" class="newsletter-input" required>
+          <button type="submit" class="btn btn-primary btn-ripple" style="padding: 1rem 2.5rem; color: var(--primary-black); font-weight: 700; white-space: nowrap;">
+            Subscribe Now
+          </button>
+        </div>
+        <div id="newsletterFeedback" style="font-size: 0.8rem; margin-top: 0.85rem; font-family: var(--font-mono);"></div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Premium Dark Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div>
+        <h3 class="footer-brand-title">STAR AUTO SERVICE</h3>
+        <p class="footer-brand-desc">
+          Best Service Center For All Car Companies. Over 33 years of premium mechanical rebuilding, digital engine calibration, and absolute reliability. Serving with perfection and passion.
+        </p>
+        <div class="footer-socials">
+          <a href="#" class="footer-social-link" aria-label="Facebook"><i data-lucide="facebook"></i></a>
+          <a href="#" class="footer-social-link" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+          <a href="#" class="footer-social-link" aria-label="YouTube"><i data-lucide="youtube"></i></a>
+        </div>
+      </div>
+
+      <div>
+        <h4 class="footer-heading">Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="book-service.html">Book Service</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-heading">Business Hours</h4>
+        <ul class="footer-links">
+          <li class="footer-contact-item">
+            <i data-lucide="clock"></i>
+            <div class="footer-contact-text">
+              <strong>Monday - Saturday</strong>
+              09:00 AM - 08:00 PM
+            </div>
+          </li>
+          <li class="footer-contact-item">
+            <i data-lucide="info"></i>
+            <div class="footer-contact-text">
+              <strong>Sunday</strong>
+              Emergency Call Only
+            </div>
+          </li>
+          <li class="footer-contact-item">
+            <i data-lucide="map-pin"></i>
+            <div class="footer-contact-text">
+              <strong>Location</strong>
+              Ahmedabad, Gujarat, India
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Final Footer requirements: Display current year dynamically -->
+    <div class="footer-bottom">
+      <p>&copy; <span class="current-year">2026</span> Star Auto Service. All Rights Reserved.</p>
+      <p class="footer-thankyou">Thank You For Visiting Our Website</p>
+      <p class="footer-credit">Developed By <span class="gold-text">FAIZ KHAN</span></p>
+    </div>
+  </footer>
+
+  <!-- Floating Quick Actions (Fully working, visible while scrolling) -->
+  <div class="floating-actions-extended">
+    <a href="tel:+919106770230" class="floating-btn floating-call-btn" title="Call chief mechanic Papau Bhai">
+      <i data-lucide="phone"></i>
+    </a>
+    <a href="https://wa.me/919106770230" class="floating-btn floating-whatsapp" target="_blank" rel="noopener noreferrer" title="WhatsApp Chat">
+      <i data-lucide="message-square"></i>
+    </a>
+    <button class="floating-btn floating-backtop" id="backTopBtn" title="Back To Top">
+      <i data-lucide="arrow-up"></i>
+    </button>
+  </div>
+
+  <!-- Success Popup Modal Backdrop -->
+  <div class="modal-backdrop" id="contactSuccessModalBackdrop">
+    <div class="success-modal">
+      <div class="success-modal-icon">
+        <i data-lucide="check"></i>
+      </div>
+      <h3 class="success-modal-title">Message Sent!</h3>
+      <p class="success-modal-desc">
+        Your contact inquiry has been securely stored. Our service coordinators will review the details and reach out to you within 1-2 hours.
+      </p>
+      <button class="btn btn-primary btn-ripple" id="closeContactModalBtn" style="padding: 1rem 3rem; color: var(--primary-black);">Done</button>
+    </div>
+  </div>
+
+  <!-- Lucide Icon Libraries and Scripts -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="/js/script.js"></script>
+
+  <!-- Interactive Contact Validation & Logic Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Elements lookup
+      const contactForm = document.getElementById('contactForm');
+      const submitBtn = document.getElementById('submitContactBtn');
+      const btnSpinner = document.getElementById('contactBtnSpinner');
+      
+      const cName = document.getElementById('contactName');
+      const cPhone = document.getElementById('contactPhone');
+      const cEmail = document.getElementById('contactEmail');
+      const cSubject = document.getElementById('contactSubject');
+      const cMessage = document.getElementById('contactMessage');
+
+      const nameFeedback = document.getElementById('contactNameFeedback');
+      const phoneFeedback = document.getElementById('contactPhoneFeedback');
+      const emailFeedback = document.getElementById('contactEmailFeedback');
+      const subjectFeedback = document.getElementById('contactSubjectFeedback');
+      const messageFeedback = document.getElementById('contactMessageFeedback');
+      const messageCharCounter = document.getElementById('contactMessageCharCounter');
+
+      const successModalBackdrop = document.getElementById('contactSuccessModalBackdrop');
+      const closeModalBtn = document.getElementById('closeContactModalBtn');
+
+      const newsletterForm = document.getElementById('newsletterForm');
+      const newsletterEmail = document.getElementById('newsletterEmail');
+      const newsletterFeedback = document.getElementById('newsletterFeedback');
+
+      // Floating Back To Top button state controller
+      const backTopBtn = document.getElementById('backTopBtn');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 150) {
+          if (backTopBtn) backTopBtn.classList.add('show');
+        } else {
+          if (backTopBtn) backTopBtn.classList.remove('show');
+        }
+      });
+      if (backTopBtn) {
+        backTopBtn.addEventListener('click', () => {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      }
+
+      // Track validity status of required fields
+      const fieldStatus = {
+        name: false,
+        phone: false,
+        subject: false,
+        message: false,
+        email: true // Optional field, defaults to valid unless invalid text entered
+      };
+
+      // Helper feedback generator
+      function showFeedback(inputEl, feedbackEl, isValid, message, fieldKey) {
+        fieldStatus[fieldKey] = isValid;
+        
+        if (inputEl.value.trim() === '') {
+          inputEl.classList.remove('is-valid', 'is-invalid');
+          feedbackEl.textContent = '';
+          fieldStatus[fieldKey] = (fieldKey === 'email'); // true for optional email, false for required
+        } else if (isValid) {
+          inputEl.classList.remove('is-invalid');
+          inputEl.classList.add('is-valid');
+          feedbackEl.textContent = '✔ Valid field entry';
+          feedbackEl.className = 'validation-feedback valid';
+        } else {
+          inputEl.classList.remove('is-valid');
+          inputEl.classList.add('is-invalid');
+          feedbackEl.textContent = message;
+          feedbackEl.className = 'validation-feedback invalid';
+        }
+        
+        updateButtonState();
+      }
+
+      // Validations
+      function validateName() {
+        const val = cName.value.trim();
+        const isValid = val.length >= 3;
+        showFeedback(cName, nameFeedback, isValid, 'Name must be at least 3 characters.', 'name');
+      }
+
+      function validatePhone() {
+        const val = cPhone.value.trim();
+        const IndianMobileRegex = /^[6-9]\d{9}$/;
+        const isValid = IndianMobileRegex.test(val);
+        showFeedback(cPhone, phoneFeedback, isValid, 'Please enter a valid 10-digit Indian phone number.', 'phone');
+      }
+
+      function validateEmail() {
+        const val = cEmail.value.trim();
+        if (val === '') {
+          cEmail.classList.remove('is-valid', 'is-invalid');
+          emailFeedback.textContent = '';
+          fieldStatus.email = true;
+          updateButtonState();
+          return;
+        }
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        const isValid = emailRegex.test(val);
+        showFeedback(cEmail, emailFeedback, isValid, 'Please enter a valid email address (or leave empty).', 'email');
+      }
+
+      function validateSubject() {
+        const val = cSubject.value.trim();
+        const isValid = val.length >= 4;
+        showFeedback(cSubject, subjectFeedback, isValid, 'Subject is required (minimum 4 characters).', 'subject');
+      }
+
+      function validateMessage() {
+        const val = cMessage.value.trim();
+        const len = val.length;
+        messageCharCounter.textContent = `Characters: ${len}/1000`;
+        const isValid = len >= 20;
+        showFeedback(cMessage, messageFeedback, isValid, 'Message must describe your inquiry in at least 20 characters.', 'message');
+      }
+
+      function updateButtonState() {
+        const allValid = fieldStatus.name && fieldStatus.phone && fieldStatus.subject && fieldStatus.message && fieldStatus.email;
+        if (allValid) {
+          submitBtn.removeAttribute('disabled');
+        } else {
+          submitBtn.setAttribute('disabled', 'true');
+        }
+      }
+
+      // Listeners
+      cName.addEventListener('input', validateName);
+      cName.addEventListener('blur', validateName);
+
+      cPhone.addEventListener('input', validatePhone);
+      cPhone.addEventListener('blur', validatePhone);
+
+      cEmail.addEventListener('input', validateEmail);
+      cEmail.addEventListener('blur', validateEmail);
+
+      cSubject.addEventListener('input', validateSubject);
+      cSubject.addEventListener('blur', validateSubject);
+
+      cMessage.addEventListener('input', validateMessage);
+      cMessage.addEventListener('blur', validateMessage);
+
+      // Contact Form submit
+      contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        validateName();
+        validatePhone();
+        validateEmail();
+        validateSubject();
+        validateMessage();
+
+        const allValid = fieldStatus.name && fieldStatus.phone && fieldStatus.subject && fieldStatus.message && fieldStatus.email;
+        if (!allValid) return;
+
+        submitBtn.setAttribute('disabled', 'true');
+        btnSpinner.style.display = 'inline-block';
+
+        setTimeout(() => {
+          // Message Object
+          const messageData = {
+            name: cName.value.trim(),
+            phone: cPhone.value.trim(),
+            email: cEmail.value.trim(),
+            subject: cSubject.value.trim(),
+            message: cMessage.value.trim(),
+            timestamp: new Date().toISOString()
+          };
+
+          // Save to Local Storage
+          const existingMessages = JSON.parse(localStorage.getItem('starAutoMessages')) || [];
+          existingMessages.push(messageData);
+          localStorage.setItem('starAutoMessages', JSON.stringify(existingMessages));
+
+          // Reset Form and highlights
+          contactForm.reset();
+          document.querySelectorAll('.form-input').forEach(el => {
+            el.classList.remove('is-valid', 'is-invalid');
+          });
+          document.querySelectorAll('.validation-feedback').forEach(el => {
+            el.textContent = '';
+          });
+          messageCharCounter.textContent = 'Characters: 0/1000';
+          
+          // Reset tracking
+          Object.keys(fieldStatus).forEach(key => {
+            fieldStatus[key] = (key === 'email');
+          });
+          updateButtonState();
+
+          // Hide spinner & open modal
+          btnSpinner.style.display = 'none';
+          successModalBackdrop.classList.add('show');
+
+        }, 1200);
+      });
+
+      // Close success popup modal
+      closeModalBtn.addEventListener('click', () => {
+        successModalBackdrop.classList.remove('show');
+      });
+      successModalBackdrop.addEventListener('click', (e) => {
+        if (e.target === successModalBackdrop) {
+          successModalBackdrop.classList.remove('show');
+        }
+      });
+
+      // Newsletter form submission validation and feedback
+      if (newsletterForm) {
+        newsletterForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+          const emailVal = newsletterEmail.value.trim();
+          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+          if (!emailRegex.test(emailVal)) {
+            newsletterFeedback.textContent = '❌ Please enter a valid email address.';
+            newsletterFeedback.style.color = '#dc3545';
+            return;
+          }
+
+          const subscribeBtn = newsletterForm.querySelector('button');
+          subscribeBtn.disabled = true;
+          newsletterFeedback.textContent = '⏳ Processing subscription...';
+          newsletterFeedback.style.color = 'var(--accent-gold)';
+
+          setTimeout(() => {
+            // Save to Local Storage subscriber list
+            const subscribers = JSON.parse(localStorage.getItem('starAutoSubscribers')) || [];
+            subscribers.push({ email: emailVal, timestamp: new Date().toISOString() });
+            localStorage.setItem('starAutoSubscribers', JSON.stringify(subscribers));
+
+            newsletterForm.reset();
+            newsletterFeedback.textContent = '✔ Thank you for subscribing! Check your inbox for updates.';
+            newsletterFeedback.style.color = '#25d366';
+            subscribeBtn.disabled = false;
+          }, 1000);
+        });
+      }
+
+      // Highlight active day in Business Hours Showcase
+      const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+      const todayIndex = new Date().getDay();
+      const currentDayName = days[todayIndex];
+      const activeRow = document.getElementById('dayHours' + currentDayName);
+      if (activeRow) {
+        activeRow.classList.add('active-today');
+        
+        // Add a badge dynamically indicating it is today
+        const badgeSpan = document.createElement('span');
+        badgeSpan.textContent = ' TODAY';
+        badgeSpan.style.fontSize = '0.65rem';
+        badgeSpan.style.background = 'var(--accent-gold)';
+        badgeSpan.style.color = 'var(--primary-black)';
+        badgeSpan.style.padding = '0.15rem 0.4rem';
+        badgeSpan.style.borderRadius = '3px';
+        badgeSpan.style.marginLeft = '0.75rem';
+        badgeSpan.style.fontWeight = '900';
+        badgeSpan.style.fontFamily = 'var(--font-mono)';
+        
+        activeRow.querySelector('.day-name').appendChild(badgeSpan);
+      }
+    });
+  </script>
+</body>
+</html>

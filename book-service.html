@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Premium Car Service Booking - Star Auto Service</title>
+  <meta name="description" content="Book a luxury auto workshop service at Star Auto Service. Premium, real-time booking form with instant validation, 33 years of certified engineering mastery.">
+  <!-- Inline Theme Loader to prevent visual flash of dark mode -->
+  <script>
+    if (localStorage.getItem('starAutoTheme') === 'light') {
+      document.documentElement.classList.add('light-theme');
+    }
+  </script>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+  <!-- Loading Animation -->
+  <div id="loader">
+    <div class="loader-ring"></div>
+    <div class="loader-logo">STAR AUTO</div>
+  </div>
+
+  <!-- Header Info Strip -->
+  <div class="header-strip">
+    <div class="header-mechanic">
+      <div class="icon-wrapper">
+        <i data-lucide="phone"></i>
+      </div>
+      <div>
+        <span class="header-mechanic-label">Mukhtyar ali</span>
+        <a href="tel:+919106770230" class="header-mechanic-phone">+91 9106770230</a>
+      </div>
+    </div>
+    <div class="header-logo-area">
+      <h1 class="header-logo-title">STAR AUTO SERVICE</h1>
+      <div class="header-logo-experience">33 Years Experience</div>
+      <div class="header-logo-tagline">Best Service Center For All Car Companies</div>
+    </div>
+    <div class="header-mechanic">
+      <div class="icon-wrapper">
+        <i data-lucide="phone"></i>
+      </div>
+      <div>
+        <span class="header-mechanic-label">Iqbal ali</span>
+        <a href="tel:+919909698474" class="header-mechanic-phone">+91 9909698474</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sticky Main Navbar -->
+  <nav class="navbar">
+    <a href="index.html" class="nav-brand">
+      <i data-lucide="wrench" class="gold-text"></i> STAR AUTO <span>SERVICE</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="book-service.html" class="active">Book Service</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-cta" style="display: flex; align-items: center; gap: 1rem;">
+      <button id="themeToggleBtn" class="theme-toggle-btn" aria-label="Toggle Dark/Light Mode" title="Toggle Theme">
+        <i data-lucide="sun" class="sun-icon"></i>
+        <i data-lucide="moon" class="moon-icon"></i>
+      </button>
+      <a href="book-service.html" class="btn btn-primary">Book Slot</a>
+    </div>
+    <button class="hamburger" id="hamburgerBtn" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Overlay Navigation -->
+  <div class="mobile-nav-overlay" id="mobileNavOverlay">
+    <div class="mobile-theme-toggle-wrap" style="padding: 2rem 1.5rem 1rem 1.5rem; text-align: center; border-bottom: 1px solid var(--glass-border); display: flex; justify-content: center;">
+      <button id="mobileThemeToggleBtn" class="theme-toggle-btn" aria-label="Toggle Dark/Light Mode" style="display: flex; gap: 0.5rem; width: auto; padding: 0 1.5rem;">
+        <span style="font-size: 0.8rem; font-family: var(--font-mono); color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; display: inline-block; margin-right: 0.25rem;">Theme:</span>
+        <i data-lucide="sun" class="sun-icon"></i>
+        <i data-lucide="moon" class="moon-icon"></i>
+      </button>
+    </div>
+    <ul class="mobile-nav-links" style="margin-top: 1.5rem;">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="book-service.html" class="active">Book Service</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li style="margin-top: 1rem;">
+        <a href="book-service.html" class="btn btn-primary" style="font-size: 1rem; padding: 0.75rem 2rem; color: #050505;">Book Slot Now</a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Page Header Title Section -->
+  <header class="page-header">
+    <div class="page-header-bg" style="background-image: url('https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?q=80&w=1200&auto=format&fit=crop');"></div>
+    <div class="page-header-overlay"></div>
+    <div class="page-header-content">
+      <h1 class="page-title">Book Your Car Service</h1>
+      <p class="page-header-subtitle">Fast • Reliable • Professional</p>
+      <p class="page-header-tagline">"Schedule your vehicle service in just a few minutes."</p>
+      <div class="breadcrumbs" style="margin-top: 1.5rem;">
+        <a href="index.html">Home</a>
+        <span>→</span>
+        <span>Book Service</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Booking Form Section -->
+  <section class="form-section" style="padding: 6rem 2rem; background: var(--primary-black);">
+    <div class="luxury-form" style="max-width: 1100px; margin: 0 auto; background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 20px; padding: 3.5rem; box-shadow: var(--shadow-luxury);">
+      
+      <!-- Progress Bar -->
+      <div class="booking-progress-container">
+        <div class="booking-progress-header">
+          <span>Booking Form Progress</span>
+          <span id="progressPercent">0% Completed</span>
+        </div>
+        <div class="booking-progress-track">
+          <div class="booking-progress-fill" id="progressBarFill"></div>
+        </div>
+      </div>
+
+      <div class="services-header" style="text-align: center; margin-bottom: 3.5rem;">
+        <span class="section-badge">Secure Booking</span>
+        <h2 class="section-title" style="font-size: 2.2rem; margin-bottom: 1rem;">Reserve Your Workshop Slot</h2>
+        <p class="section-desc" style="max-width: 700px; margin: 0 auto;">
+          Enter your information below to register your vehicle for high-precision mechanical servicing. Required fields are marked with an asterisk (*).
+        </p>
+      </div>
+
+      <form id="bookingForm" novalidate class="contact-form-body">
+        
+        <!-- Split into 2 columns on desktop -->
+        <div class="form-cols-2">
+          
+          <!-- Column 1: Customer Information -->
+          <div class="form-column-section">
+            <h3 class="form-column-title">
+              <i data-lucide="user" style="color: var(--accent-gold); width: 20px;"></i> Customer Information
+            </h3>
+            
+            <!-- Mechanic Dropdown -->
+            <div class="form-group">
+              <label class="form-label" for="bookMechanic">Preferred Mechanic</label>
+              <select class="form-input" id="bookMechanic" name="mechanicName">
+                <option value="Papau Bhai">Papau Bhai (Engine Specialist)</option>
+                <option value="Iqbal Bhai">Iqbal Bhai (Diagnostics Specialist)</option>
+              </select>
+            </div>
+
+            <!-- Car Owner Name -->
+            <div class="form-group form-group-relative">
+              <label class="form-label" for="bookName">Car Owner Name *</label>
+              <input class="form-input" type="text" id="bookName" name="ownerName" placeholder="Min. 3 characters" required>
+              <div class="validation-feedback" id="nameFeedback"></div>
+            </div>
+
+            <!-- Owner Mobile Number -->
+            <div class="form-group form-group-relative">
+              <label class="form-label" for="bookPhone">Owner Mobile Number *</label>
+              <input class="form-input" type="tel" id="bookPhone" name="ownerMobile" placeholder="10-digit Indian Mobile" required>
+              <div class="validation-feedback" id="phoneFeedback"></div>
+            </div>
+
+            <!-- Email Address -->
+            <div class="form-group">
+              <label class="form-label" for="bookEmail">Email Address</label>
+              <input class="form-input" type="email" id="bookEmail" name="ownerEmail" placeholder="e.g. contact@example.com">
+            </div>
+
+            <!-- Owner Address -->
+            <div class="form-group">
+              <label class="form-label" for="bookAddress">Owner Address</label>
+              <input class="form-input" type="text" id="bookAddress" name="ownerAddress" placeholder="e.g. 101, Star Apartments">
+            </div>
+
+            <!-- City, State, PIN in a small flex grid -->
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem;">
+              <div class="form-group">
+                <label class="form-label" for="bookCity" style="font-size: 0.65rem;">City</label>
+                <input class="form-input" type="text" id="bookCity" name="ownerCity" placeholder="Surat" style="padding: 0.75rem 1rem;">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="bookState" style="font-size: 0.65rem;">State</label>
+                <input class="form-input" type="text" id="bookState" name="ownerState" placeholder="Gujarat" style="padding: 0.75rem 1rem;">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="bookPinCode" style="font-size: 0.65rem;">PIN Code</label>
+                <input class="form-input" type="text" id="bookPinCode" name="ownerPinCode" placeholder="395003" style="padding: 0.75rem 1rem;">
+              </div>
+            </div>
+          </div>
+
+          <!-- Column 2: Vehicle Information -->
+          <div class="form-column-section">
+            <h3 class="form-column-title">
+              <i data-lucide="car" style="color: var(--accent-gold); width: 20px;"></i> Vehicle Information
+            </h3>
+
+            <!-- Car Company -->
+            <div class="form-group form-group-relative">
+              <label class="form-label" for="bookCompany">Car Company *</label>
+              <select class="form-input" id="bookCompany" name="carCompany" required>
+                <option value="" disabled selected>Select Brand...</option>
+                <option value="Maruti Suzuki">Maruti Suzuki</option>
+                <option value="Hyundai">Hyundai</option>
+                <option value="Honda">Honda</option>
+                <option value="Toyota">Toyota</option>
+                <option value="Tata">Tata</option>
+                <option value="Mahindra">Mahindra</option>
+                <option value="Kia">Kia</option>
+                <option value="BMW">BMW</option>
+                <option value="Audi">Audi</option>
+                <option value="Mercedes-Benz">Mercedes-Benz</option>
+                <option value="Volkswagen">Volkswagen</option>
+                <option value="Skoda">Skoda</option>
+                <option value="Ford">Ford</option>
+                <option value="Renault">Renault</option>
+                <option value="Nissan">Nissan</option>
+                <option value="MG">MG</option>
+                <option value="Jeep">Jeep</option>
+                <option value="Volvo">Volvo</option>
+                <option value="Lexus">Lexus</option>
+                <option value="Porsche">Porsche</option>
+                <option value="Jaguar">Jaguar</option>
+                <option value="Land Rover">Land Rover</option>
+                <option value="Tesla">Tesla</option>
+              </select>
+              <div class="validation-feedback" id="companyFeedback"></div>
+            </div>
+
+            <!-- Car Model -->
+            <div class="form-group form-group-relative">
+              <label class="form-label" for="bookModel">Car Model *</label>
+              <input class="form-input" type="text" id="bookModel" name="carModel" placeholder="e.g. Swift, Fortuner, i20" required>
+              <div class="validation-feedback" id="modelFeedback"></div>
+            </div>
+
+            <!-- Vehicle Registration Number -->
+            <div class="form-group">
+              <label class="form-label" for="bookReg">Vehicle Registration Number</label>
+              <input class="form-input" type="text" id="bookReg" name="carReg" placeholder="e.g. GJ-05-AA-1234">
+            </div>
+
+            <!-- Fuel Type -->
+            <div class="form-group">
+              <label class="form-label" for="bookFuel">Fuel Type</label>
+              <select class="form-input" id="bookFuel" name="carFuel">
+                <option value="Petrol">Petrol</option>
+                <option value="Diesel">Diesel</option>
+                <option value="CNG">CNG</option>
+                <option value="Electric">Electric</option>
+                <option value="Hybrid">Hybrid</option>
+              </select>
+            </div>
+
+            <!-- Transmission -->
+            <div class="form-group">
+              <label class="form-label" for="bookTransmission">Transmission</label>
+              <select class="form-input" id="bookTransmission" name="carTransmission">
+                <option value="Manual">Manual</option>
+                <option value="Automatic">Automatic</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service Details Section (Full Width Background Box) -->
+        <div class="form-column-section" style="margin-top: 2rem;">
+          <h3 class="form-column-title">
+            <i data-lucide="wrench" style="color: var(--accent-gold); width: 20px;"></i> Service Details &amp; Schedule
+          </h3>
+
+          <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem;">
+            <!-- Service Type Dropdown -->
+            <div class="form-group">
+              <label class="form-label" for="bookService">Service Type</label>
+              <select class="form-input" id="bookService" name="serviceType">
+                <option value="General Service">General Service</option>
+                <option value="Oil Change">Oil Change</option>
+                <option value="Brake Service">Brake Service</option>
+                <option value="Engine Repair">Engine Repair</option>
+                <option value="AC Service">AC Service</option>
+                <option value="Battery Replacement">Battery Replacement</option>
+                <option value="Wheel Alignment">Wheel Alignment</option>
+                <option value="Computer Diagnostics">Computer Diagnostics</option>
+                <option value="Car Wash">Car Wash</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+
+            <!-- Pickup & Drop Needed -->
+            <div class="form-group">
+              <label class="form-label" for="bookPickup">Pickup &amp; Drop Required</label>
+              <select class="form-input" id="bookPickup" name="pickupDrop">
+                <option value="No">No</option>
+                <option value="Yes">Yes</option>
+              </select>
+            </div>
+
+            <!-- Preferred Date * -->
+            <div class="form-group form-group-relative">
+              <label class="form-label" for="bookDate">Preferred Date *</label>
+              <input class="form-input" type="date" id="bookDate" name="preferredDate" required>
+              <div class="validation-feedback" id="dateFeedback"></div>
+            </div>
+
+            <!-- Preferred Time * -->
+            <div class="form-group form-group-relative">
+              <label class="form-label" for="bookTime">Preferred Time *</label>
+              <input class="form-input" type="time" id="bookTime" name="preferredTime" required>
+              <div class="validation-feedback" id="timeFeedback"></div>
+            </div>
+          </div>
+
+          <!-- Issue description -->
+          <div class="form-group form-group-relative" style="margin-top: 1rem;">
+            <label class="form-label" for="bookIssue">Issue In Your Car *</label>
+            <textarea class="form-input" id="bookIssue" name="carIssue" rows="4" placeholder="Describe the complaints or sounds your car makes (Minimum 10 characters)..." required></textarea>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 0.35rem;">
+              <div class="validation-feedback" id="issueFeedback" style="margin-top: 0;"></div>
+              <div class="char-counter" id="issueCharCounter">Characters: 0/500</div>
+            </div>
+          </div>
+
+          <!-- Vehicle Image (Optional) -->
+          <div class="form-group" style="margin-top: 1rem;">
+            <label class="form-label">Upload Vehicle Image (Optional)</label>
+            <div class="custom-file-upload">
+              <i data-lucide="camera" style="color: var(--accent-gold);"></i>
+              <span id="fileUploadLabel">Drag &amp; drop or click to select image...</span>
+              <input type="file" id="bookImage" name="vehicleImage" accept="image/*">
+              <img id="imagePreview" class="file-preview" alt="Vehicle preview">
+            </div>
+          </div>
+        </div>
+
+        <!-- Submit Button Wrap -->
+        <div class="form-submit-wrapper" style="margin-top: 4rem;">
+          <button type="submit" id="submitBookingBtn" class="btn btn-primary btn-ripple" style="padding: 1.25rem 4rem; display: inline-flex; align-items: center; gap: 1rem;" disabled>
+            <i data-lucide="send"></i> 
+            <span>BOOK SERVICE</span>
+            <span class="submit-spinner" id="btnSpinner"></span>
+          </button>
+        </div>
+      </form>
+
+      <!-- Dynamic Booking Summary Card (Visible after successful submit) -->
+      <div class="booking-summary-card" id="bookingSummaryCard">
+        <div class="summary-header">
+          <div class="summary-title">
+            <i data-lucide="check-circle" style="color: #25d366;"></i>
+            <span>Booking Confirmed</span>
+          </div>
+          <span class="summary-id" id="sumID">STA-000000</span>
+        </div>
+        <div class="summary-grid">
+          <div class="summary-item">
+            <span class="summary-item-label">Booking Status</span>
+            <span class="recent-card-status"><span class="summary-status-badge">CONFIRMED</span></span>
+          </div>
+          <div class="summary-item">
+            <span class="summary-item-label">Preferred Mechanic</span>
+            <span class="summary-item-value" id="sumMechanic">-</span>
+          </div>
+          <div class="summary-item">
+            <span class="summary-item-label">Car Owner Name</span>
+            <span class="summary-item-value" id="sumOwnerName">-</span>
+          </div>
+          <div class="summary-item">
+            <span class="summary-item-label">Contact Number</span>
+            <span class="summary-item-value" id="sumMobile">-</span>
+          </div>
+          <div class="summary-item">
+            <span class="summary-item-label">Vehicle Brand</span>
+            <span class="summary-item-value" id="sumCompany">-</span>
+          </div>
+          <div class="summary-item">
+            <span class="summary-item-label">Vehicle Model</span>
+            <span class="summary-item-value" id="sumModel">-</span>
+          </div>
+          <div class="summary-item">
+            <span class="summary-item-label">Service Type</span>
+            <span class="summary-item-value" id="sumService">-</span>
+          </div>
+          <div class="summary-item">
+            <span class="summary-item-label">Schedule Date &amp; Time</span>
+            <span class="summary-item-value" id="sumSchedule">-</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Success Popup Modal -->
+  <div class="modal-backdrop" id="successModalBackdrop">
+    <div class="success-modal">
+      <div class="success-modal-icon">
+        <i data-lucide="check"></i>
+      </div>
+      <h3 class="success-modal-title">Thank You!</h3>
+      <p class="success-modal-desc">
+        Your service request has been successfully booked with Star Auto Service.<br>Our team will contact you shortly to finalize details.
+      </p>
+      <button class="btn btn-primary btn-ripple" id="closeModalBtn" style="padding: 1rem 3rem;">Done</button>
+    </div>
+  </div>
+
+  <!-- Recent Bookings History Section -->
+  <section class="recent-bookings-section">
+    <div class="recent-bookings-container">
+      <div class="services-header" style="text-align: center; margin-bottom: 4rem;">
+        <span class="section-badge">Booking Log</span>
+        <h2 class="section-title">Your Recent Bookings</h2>
+        <p class="section-desc" style="max-width: 600px; margin: 0 auto;">
+          Browse your registered automotive servicing slots and technical assignments.
+        </p>
+      </div>
+
+      <div class="recent-bookings-grid" id="recentBookingsGrid">
+        <!-- Will be dynamically populated from Local Storage -->
+        <div class="no-bookings-message">
+          <i data-lucide="calendar" style="width: 40px; height: 40px; margin: 0 auto 1rem auto; color: var(--accent-gold); display: block;"></i>
+          No bookings made yet in this session. Feel free to schedule your first service!
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Hotline Assistance Section -->
+  <section class="emergency-section" style="background: radial-gradient(circle at center, rgba(197, 168, 128, 0.05) 0%, var(--primary-black) 100%);">
+    <div class="emergency-container" style="max-width: 800px; margin: 0 auto; text-align: center;">
+      <span class="emergency-badge" style="background: rgba(197, 168, 128, 0.05); border-color: var(--accent-gold); color: var(--accent-gold);">Immediate Assistance</span>
+      <h2 class="emergency-title">Need Immediate Help? Contact Our Masters</h2>
+      <p class="emergency-desc" style="max-width: 600px; margin-left: auto; margin-right: auto; margin-bottom: 3rem;">
+        Speak directly with Papau Bhai or Iqbal Bhai for emergency breakdown consultations, parts inquiries, or quick bookings.
+      </p>
+      <div class="emergency-actions" style="display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap;">
+        <a href="tel:+919106770230" class="btn btn-secondary btn-ripple" style="display: inline-flex; align-items: center; gap: 0.75rem; padding: 1rem 2rem;">
+          <i data-lucide="phone"></i> Call Papau Bhai
+        </a>
+        <a href="tel:+919909698474" class="btn btn-secondary btn-ripple" style="display: inline-flex; align-items: center; gap: 0.75rem; padding: 1rem 2rem;">
+          <i data-lucide="phone"></i> Call Iqbal Bhai
+        </a>
+        <a href="https://wa.me/919106770230" class="btn btn-primary btn-ripple" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 0.75rem; padding: 1rem 2.5rem; color: #050505;">
+          <i data-lucide="message-square"></i> WhatsApp Live
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Premium Dark Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div>
+        <h3 class="footer-brand-title">STAR AUTO SERVICE</h3>
+        <p class="footer-brand-desc">
+          Best Service Center For All Car Companies. Over 33 years of premium mechanical rebuilding, digital engine calibration, and absolute reliability. Serving with perfection and passion.
+        </p>
+        <div class="footer-socials">
+          <a href="#" class="footer-social-link" aria-label="Facebook"><i data-lucide="facebook"></i></a>
+          <a href="#" class="footer-social-link" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+          <a href="#" class="footer-social-link" aria-label="YouTube"><i data-lucide="youtube"></i></a>
+        </div>
+      </div>
+
+      <div>
+        <h4 class="footer-heading">Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="book-service.html">Book Service</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-heading">Business Hours</h4>
+        <ul class="footer-links">
+          <li class="footer-contact-item">
+            <i data-lucide="clock"></i>
+            <div class="footer-contact-text">
+              <strong>Monday - Saturday</strong>
+              09:00 AM - 08:00 PM
+            </div>
+          </li>
+          <li class="footer-contact-item">
+            <i data-lucide="info"></i>
+            <div class="footer-contact-text">
+              <strong>Sunday</strong>
+              Emergency Call Only
+            </div>
+          </li>
+          <li class="footer-contact-item">
+            <i data-lucide="map-pin"></i>
+            <div class="footer-contact-text">
+              <strong>Location</strong>
+              Surat, Gujarat, India
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; <span class="current-year">2026</span> Star Auto Service. All Rights Reserved.</p>
+      <p class="footer-thankyou">Thank You For Visiting Our Website</p>
+      <p class="footer-credit">Developed By <span class="gold-text">FAIZ KHA</span></p>
+    </div>
+  </footer>
+
+  <!-- Floating Quick Actions -->
+  <div class="floating-actions">
+    <a href="tel:+919106770230" class="floating-btn floating-call" title="Call Us Now">
+      <i data-lucide="phone"></i>
+    </a>
+    <a href="https://wa.me/919106770230" class="floating-btn floating-whatsapp" target="_blank" rel="noopener noreferrer" title="WhatsApp Chat">
+      <i data-lucide="message-square"></i>
+    </a>
+    <button class="floating-btn floating-backtop" id="backTopBtn" title="Back To Top">
+      <i data-lucide="arrow-up"></i>
+    </button>
+  </div>
+
+  <!-- Lucide Icon Libraries and Scripts -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="/js/script.js"></script>
+
+  <!-- Interactive Validation, Progress Bar, Storage & Popups Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Elements lookup
+      const bookingForm = document.getElementById('bookingForm');
+      const submitBtn = document.getElementById('submitBookingBtn');
+      const btnSpinner = document.getElementById('btnSpinner');
+      
+      const bookName = document.getElementById('bookName');
+      const bookPhone = document.getElementById('bookPhone');
+      const bookCompany = document.getElementById('bookCompany');
+      const bookModel = document.getElementById('bookModel');
+      const bookDate = document.getElementById('bookDate');
+      const bookTime = document.getElementById('bookTime');
+      const bookIssue = document.getElementById('bookIssue');
+      
+      const nameFeedback = document.getElementById('nameFeedback');
+      const phoneFeedback = document.getElementById('phoneFeedback');
+      const companyFeedback = document.getElementById('companyFeedback');
+      const modelFeedback = document.getElementById('modelFeedback');
+      const dateFeedback = document.getElementById('dateFeedback');
+      const timeFeedback = document.getElementById('timeFeedback');
+      const issueFeedback = document.getElementById('issueFeedback');
+      const issueCharCounter = document.getElementById('issueCharCounter');
+      
+      const progressBarFill = document.getElementById('progressBarFill');
+      const progressPercent = document.getElementById('progressPercent');
+      
+      const successModalBackdrop = document.getElementById('successModalBackdrop');
+      const closeModalBtn = document.getElementById('closeModalBtn');
+      const recentBookingsGrid = document.getElementById('recentBookingsGrid');
+      
+      // File upload elements
+      const bookImage = document.getElementById('bookImage');
+      const fileUploadLabel = document.getElementById('fileUploadLabel');
+      const imagePreview = document.getElementById('imagePreview');
+      let uploadedImageBase64 = null;
+
+      // Booking Summary elements
+      const bookingSummaryCard = document.getElementById('bookingSummaryCard');
+      const sumID = document.getElementById('sumID');
+      const sumMechanic = document.getElementById('sumMechanic');
+      const sumOwnerName = document.getElementById('sumOwnerName');
+      const sumMobile = document.getElementById('sumMobile');
+      const sumCompany = document.getElementById('sumCompany');
+      const sumModel = document.getElementById('sumModel');
+      const sumService = document.getElementById('sumService');
+      const sumSchedule = document.getElementById('sumSchedule');
+
+      // Set min attribute for date input to prevent past dates
+      const todayString = new Date().toISOString().split('T')[0];
+      bookDate.setAttribute('min', todayString);
+
+      // Parse parameters to pre-fill services (if arriving from services.html)
+      const queryParams = new URLSearchParams(window.location.search);
+      const serviceParam = queryParams.get('service');
+      if (serviceParam) {
+        const serviceSelect = document.getElementById('bookService');
+        if (serviceSelect) {
+          const map = {
+            'general': 'General Service',
+            'engine': 'Engine Repair',
+            'overhaul': 'Engine Repair',
+            'diagnostics': 'Computer Diagnostics',
+            'oil-change': 'Oil Change',
+            'brakes': 'Brake Service',
+            'clutch': 'Other',
+            'suspension': 'Other',
+            'steering': 'Other',
+            'battery': 'Battery Replacement',
+            'ac': 'AC Service',
+            'radiator': 'Other',
+            'alignment': 'Wheel Alignment',
+            'balancing': 'Wheel Alignment',
+            'tyres': 'Other',
+            'denting': 'Other',
+            'detailing': 'Car Wash',
+            'insurance': 'Other'
+          };
+          const mappedValue = map[serviceParam.toLowerCase()];
+          if (mappedValue) {
+            serviceSelect.value = mappedValue;
+          }
+        }
+      }
+
+      // Track validity status of the 7 required fields
+      const fieldStatus = {
+        name: false,
+        phone: false,
+        company: false,
+        model: false,
+        date: false,
+        time: false,
+        issue: false
+      };
+
+      // Realtime validation helper function
+      function showFeedback(inputEl, feedbackEl, isValid, message, fieldKey) {
+        fieldStatus[fieldKey] = isValid;
+        
+        if (inputEl.value.trim() === '') {
+          // If completely empty, remove custom border classes and show a quiet indicator
+          inputEl.classList.remove('is-valid', 'is-invalid');
+          feedbackEl.textContent = '';
+          fieldStatus[fieldKey] = false;
+        } else if (isValid) {
+          inputEl.classList.remove('is-invalid');
+          inputEl.classList.add('is-valid');
+          feedbackEl.textContent = '✔ Valid field entry';
+          feedbackEl.className = 'validation-feedback valid';
+        } else {
+          inputEl.classList.remove('is-valid');
+          inputEl.classList.add('is-invalid');
+          feedbackEl.textContent = message;
+          feedbackEl.className = 'validation-feedback invalid';
+        }
+        
+        updateProgressAndButton();
+      }
+
+      // Required validators
+      function validateName() {
+        const val = bookName.value.trim();
+        const isValid = val.length >= 3;
+        showFeedback(bookName, nameFeedback, isValid, 'Owner name must be at least 3 characters.', 'name');
+      }
+
+      function validatePhone() {
+        const val = bookPhone.value.trim();
+        // Indian mobile numbers start with 6-9 and are exactly 10 digits
+        const indianMobileRegex = /^[6-9]\d{9}$/;
+        const isValid = indianMobileRegex.test(val);
+        showFeedback(bookPhone, phoneFeedback, isValid, 'Please enter a valid 10-digit Indian phone number.', 'phone');
+      }
+
+      function validateCompany() {
+        const val = bookCompany.value;
+        const isValid = val !== '';
+        showFeedback(bookCompany, companyFeedback, isValid, 'Please select a car brand.', 'company');
+      }
+
+      function validateModel() {
+        const val = bookModel.value.trim();
+        const isValid = val.length >= 2;
+        showFeedback(bookModel, modelFeedback, isValid, 'Please specify your car model name.', 'model');
+      }
+
+      function validateDate() {
+        const val = bookDate.value;
+        if (!val) {
+          showFeedback(bookDate, dateFeedback, false, 'Preferred service date is required.', 'date');
+          return;
+        }
+        
+        const selectedDate = new Date(val);
+        selectedDate.setHours(23, 59, 59, 999); // Set to end of day
+        const today = new Date();
+        today.setHours(0, 0, 0, 0); // Start of today
+        
+        const isValid = selectedDate >= today;
+        showFeedback(bookDate, dateFeedback, isValid, 'Preferred date cannot be in the past.', 'date');
+      }
+
+      function validateTime() {
+        const val = bookTime.value;
+        const isValid = val !== '';
+        showFeedback(bookTime, timeFeedback, isValid, 'Preferred arrival time is required.', 'time');
+      }
+
+      function validateIssue() {
+        const val = bookIssue.value.trim();
+        const charLength = val.length;
+        issueCharCounter.textContent = `Characters: ${charLength}/500`;
+        
+        const isValid = charLength >= 10;
+        showFeedback(bookIssue, issueFeedback, isValid, 'Please describe your issues (at least 10 characters).', 'issue');
+      }
+
+      // Progress and button state management
+      function updateProgressAndButton() {
+        const totalFields = 7;
+        let validCount = 0;
+        if (fieldStatus.name) validCount++;
+        if (fieldStatus.phone) validCount++;
+        if (fieldStatus.company) validCount++;
+        if (fieldStatus.model) validCount++;
+        if (fieldStatus.date) validCount++;
+        if (fieldStatus.time) validCount++;
+        if (fieldStatus.issue) validCount++;
+
+        const percentage = Math.round((validCount / totalFields) * 100);
+        progressBarFill.style.width = `${percentage}%`;
+        progressPercent.textContent = `${percentage}% Completed`;
+
+        if (percentage === 100) {
+          submitBtn.removeAttribute('disabled');
+        } else {
+          submitBtn.setAttribute('disabled', 'true');
+        }
+      }
+
+      // Input event listeners for real-time validation
+      bookName.addEventListener('input', validateName);
+      bookName.addEventListener('blur', validateName);
+
+      bookPhone.addEventListener('input', validatePhone);
+      bookPhone.addEventListener('blur', validatePhone);
+
+      bookCompany.addEventListener('change', validateCompany);
+      bookCompany.addEventListener('blur', validateCompany);
+
+      bookModel.addEventListener('input', validateModel);
+      bookModel.addEventListener('blur', validateModel);
+
+      bookDate.addEventListener('change', validateDate);
+      bookDate.addEventListener('blur', validateDate);
+
+      bookTime.addEventListener('change', validateTime);
+      bookTime.addEventListener('blur', validateTime);
+
+      bookIssue.addEventListener('input', validateIssue);
+      bookIssue.addEventListener('blur', validateIssue);
+
+      // File upload preview handler
+      bookImage.addEventListener('change', (e) => {
+        const file = e.target.files[0];
+        if (file) {
+          fileUploadLabel.textContent = file.name;
+          
+          const reader = new FileReader();
+          reader.onload = function(evt) {
+            uploadedImageBase64 = evt.target.result;
+            imagePreview.src = uploadedImageBase64;
+            imagePreview.style.display = 'block';
+          };
+          reader.readAsDataURL(file);
+        } else {
+          fileUploadLabel.textContent = "Drag & drop or click to select image...";
+          imagePreview.style.display = 'none';
+          uploadedImageBase64 = null;
+        }
+      });
+
+      // Local storage loader
+      function loadBookingHistory() {
+        const bookings = JSON.parse(localStorage.getItem('starAutoBookings')) || [];
+        if (bookings.length === 0) {
+          recentBookingsGrid.innerHTML = `
+            <div class="no-bookings-message">
+              <i data-lucide="calendar" style="width: 40px; height: 40px; margin: 0 auto 1rem auto; color: var(--accent-gold); display: block;"></i>
+              No bookings made yet in this session. Feel free to schedule your first service!
+            </div>
+          `;
+          lucide.createIcons();
+          return;
+        }
+
+        recentBookingsGrid.innerHTML = '';
+        
+        // Render bookings, newest first
+        bookings.slice().reverse().forEach(booking => {
+          const card = document.createElement('div');
+          card.className = 'recent-booking-card';
+          
+          // Format date and time
+          const dateObj = new Date(booking.date);
+          const formattedDate = dateObj.toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' });
+          
+          // Image or placeholder setup
+          let imgTag = '';
+          if (booking.image) {
+            imgTag = `<img src="${booking.image}" alt="Vehicle" style="width: 100%; height: 120px; object-fit: cover; border-radius: 8px; margin-bottom: 1rem; border: 1px solid var(--glass-border);">`;
+          }
+
+          card.innerHTML = `
+            <div>
+              <div class="recent-card-header">
+                <span class="recent-card-id">${booking.id}</span>
+                <span class="summary-status-badge">CONFIRMED</span>
+              </div>
+              ${imgTag}
+              <div class="recent-card-body">
+                <div class="recent-card-row">
+                  <span class="recent-card-label">Owner</span>
+                  <span class="recent-card-val">${booking.ownerName}</span>
+                </div>
+                <div class="recent-card-row">
+                  <span class="recent-card-label">Vehicle</span>
+                  <span class="recent-card-val">${booking.carCompany} ${booking.carModel}</span>
+                </div>
+                <div class="recent-card-row">
+                  <span class="recent-card-label">Specialist</span>
+                  <span class="recent-card-val">${booking.mechanic}</span>
+                </div>
+                <div class="recent-card-row">
+                  <span class="recent-card-label">Service</span>
+                  <span class="recent-card-val">${booking.serviceType}</span>
+                </div>
+                <div class="recent-card-row">
+                  <span class="recent-card-label">Schedule</span>
+                  <span class="recent-card-val">${formattedDate} at ${booking.time}</span>
+                </div>
+              </div>
+            </div>
+          `;
+          recentBookingsGrid.appendChild(card);
+        });
+
+        lucide.createIcons();
+      }
+
+      // Ripple Click Effect Helper
+      document.querySelectorAll('.btn-ripple').forEach(button => {
+        button.addEventListener('click', function(e) {
+          const x = e.clientX - e.target.getBoundingClientRect().left;
+          const y = e.clientY - e.target.getBoundingClientRect().top;
+          
+          const ripple = document.createElement('span');
+          ripple.className = 'ripple';
+          ripple.style.left = `${x}px`;
+          ripple.style.top = `${y}px`;
+          
+          this.appendChild(ripple);
+          
+          setTimeout(() => {
+            ripple.remove();
+          }, 600);
+        });
+      });
+
+      // Submit Form Handler
+      bookingForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        // One last validation verification
+        validateName();
+        validatePhone();
+        validateCompany();
+        validateModel();
+        validateDate();
+        validateTime();
+        validateIssue();
+
+        if (progressBarFill.style.width !== '100%') {
+          return;
+        }
+
+        // Show spinner inside button
+        submitBtn.setAttribute('disabled', 'true');
+        btnSpinner.style.display = 'inline-block';
+
+        // Simulate secure dealership database sync (1.2 seconds)
+        setTimeout(() => {
+          const bookingID = 'STA-' + Date.now().toString().slice(-6) + '-' + Math.floor(Math.random() * 900 + 100);
+          
+          const bookingData = {
+            id: bookingID,
+            mechanic: document.getElementById('bookMechanic').value,
+            ownerName: bookName.value.trim(),
+            phone: bookPhone.value.trim(),
+            email: document.getElementById('bookEmail').value.trim(),
+            address: document.getElementById('bookAddress').value.trim(),
+            city: document.getElementById('bookCity').value.trim() || 'Surat',
+            state: document.getElementById('bookState').value.trim() || 'Gujarat',
+            pinCode: document.getElementById('bookPinCode').value.trim(),
+            carCompany: bookCompany.value,
+            carModel: bookModel.value.trim(),
+            regNumber: document.getElementById('bookReg').value.trim(),
+            fuelType: document.getElementById('bookFuel').value,
+            transmission: document.getElementById('bookTransmission').value,
+            serviceType: document.getElementById('bookService').value,
+            date: bookDate.value,
+            time: bookTime.value,
+            pickup: document.getElementById('bookPickup').value,
+            issue: bookIssue.value.trim(),
+            image: uploadedImageBase64,
+            status: 'CONFIRMED',
+            timestamp: new Date().toISOString()
+          };
+
+          // Save to Local Storage
+          const currentBookings = JSON.parse(localStorage.getItem('starAutoBookings')) || [];
+          currentBookings.push(bookingData);
+          localStorage.setItem('starAutoBookings', JSON.stringify(currentBookings));
+
+          // Populate Summary Card
+          sumID.textContent = bookingData.id;
+          sumMechanic.textContent = bookingData.mechanic;
+          sumOwnerName.textContent = bookingData.ownerName;
+          sumMobile.textContent = bookingData.phone;
+          sumCompany.textContent = bookingData.carCompany;
+          sumModel.textContent = bookingData.carModel;
+          sumService.textContent = bookingData.serviceType;
+          
+          const dateObj = new Date(bookingData.date);
+          const formattedDate = dateObj.toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' });
+          sumSchedule.textContent = `${formattedDate} at ${bookingData.time}`;
+
+          // Reset Form & Input Highlight states
+          bookingForm.reset();
+          document.querySelectorAll('.form-input').forEach(input => {
+            input.classList.remove('is-valid', 'is-invalid');
+          });
+          document.querySelectorAll('.validation-feedback').forEach(feedback => {
+            feedback.textContent = '';
+          });
+          uploadedImageBase64 = null;
+          imagePreview.style.display = 'none';
+          fileUploadLabel.textContent = "Drag & drop or click to select image...";
+          issueCharCounter.textContent = 'Characters: 0/500';
+
+          // Reset field validations tracking
+          Object.keys(fieldStatus).forEach(key => fieldStatus[key] = false);
+          updateProgressAndButton();
+
+          // Stop Loading spinner
+          btnSpinner.style.display = 'none';
+
+          // Reveal success summary card
+          bookingSummaryCard.style.display = 'block';
+
+          // Launch Success Modal popup
+          successModalBackdrop.classList.add('show');
+
+          // Refresh booking log grid
+          loadBookingHistory();
+
+        }, 1200);
+      });
+
+      // Close Modal Button click handler
+      closeModalBtn.addEventListener('click', () => {
+        successModalBackdrop.classList.remove('show');
+        // Scroll smoothly to summary card
+        bookingSummaryCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      });
+
+      // Close modal on clicking backdrop background
+      successModalBackdrop.addEventListener('click', (e) => {
+        if (e.target === successModalBackdrop) {
+          successModalBackdrop.classList.remove('show');
+        }
+      });
+
+      // Load bookings initially
+      loadBookingHistory();
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Star Auto Service - Best Service Center For All Car Companies</title>
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Star Auto Service has 33 years of professional experience in luxury and multi-brand car repairs. Call Papau Bhai or Iqbal Bhai for high-end diagnostics, mechanical work, and detailing.">
+  <meta name="keywords" content="Star Auto Service, car workshop, automobile service, luxury car repairs, Papau Bhai, Iqbal Bhai">
+  <!-- Inline Theme Loader to prevent visual flash of dark mode -->
+  <script>
+    if (localStorage.getItem('starAutoTheme') === 'light') {
+      document.documentElement.classList.add('light-theme');
+    }
+  </script>
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+  <!-- Loading Animation -->
+  <div id="loader">
+    <div class="loader-ring"></div>
+    <div class="loader-logo">STAR AUTO</div>
+  </div>
+
+  <!-- Header Info Strip (Always Present) -->
+  <div class="header-strip">
+    <div class="header-mechanic">
+      <div class="icon-wrapper">
+        <i data-lucide="phone"></i>
+      </div>
+      <div>
+        <span class="header-mechanic-label">Mukhtyar ali</span>
+        <a href="tel:+919106770230" class="header-mechanic-phone">+91 9106770230</a>
+      </div>
+    </div>
+    <div class="header-logo-area">
+      <h1 class="header-logo-title">STAR AUTO SERVICE</h1>
+      <div class="header-logo-experience">33 Years Experience</div>
+      <div class="header-logo-tagline">Best Service Center For All Car Companies</div>
+    </div>
+    <div class="header-mechanic">
+      <div class="icon-wrapper">
+        <i data-lucide="phone"></i>
+      </div>
+      <div>
+        <span class="header-mechanic-label">Iqbal ali</span>
+        <a href="tel:+919909698474" class="header-mechanic-phone">+91 9909698474</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sticky Main Navbar -->
+  <nav class="navbar">
+    <a href="index.html" class="nav-brand">
+      <i data-lucide="wrench" class="gold-text"></i> STAR AUTO <span>SERVICE</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="book-service.html">Book Service</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-cta" style="display: flex; align-items: center; gap: 1rem;">
+      <button id="themeToggleBtn" class="theme-toggle-btn" aria-label="Toggle Dark/Light Mode" title="Toggle Theme">
+        <i data-lucide="sun" class="sun-icon"></i>
+        <i data-lucide="moon" class="moon-icon"></i>
+      </button>
+      <a href="book-service.html" class="btn btn-primary">Book Slot</a>
+    </div>
+    <button class="hamburger" id="hamburgerBtn" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Overlay Navigation -->
+  <div class="mobile-nav-overlay" id="mobileNavOverlay">
+    <div class="mobile-theme-toggle-wrap" style="padding: 2rem 1.5rem 1rem 1.5rem; text-align: center; border-bottom: 1px solid var(--glass-border); display: flex; justify-content: center;">
+      <button id="mobileThemeToggleBtn" class="theme-toggle-btn" aria-label="Toggle Dark/Light Mode" style="display: flex; gap: 0.5rem; width: auto; padding: 0 1.5rem;">
+        <span style="font-size: 0.8rem; font-family: var(--font-mono); color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; display: inline-block; margin-right: 0.25rem;">Theme:</span>
+        <i data-lucide="sun" class="sun-icon"></i>
+        <i data-lucide="moon" class="moon-icon"></i>
+      </button>
+    </div>
+    <ul class="mobile-nav-links" style="margin-top: 1.5rem;">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="book-service.html">Book Service</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li style="margin-top: 1rem;">
+        <a href="book-service.html" class="btn btn-primary" style="font-size: 1rem; padding: 0.75rem 2rem; color: #050505;">Book Slot Now</a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-experience-badge">
+        <i data-lucide="award"></i> 33 Years Experience
+      </div>
+      <h2 class="hero-title">STAR AUTO SERVICE</h2>
+      <p class="hero-subtitle">Best Service Center For All Car Companies</p>
+      <p class="section-desc" style="max-width: 700px; margin: -1.5rem auto 3rem auto; color: var(--text-light); line-height: 1.8;">
+        Professional car repair and maintenance services for all major car brands. Trusted by customers for quality workmanship, genuine spare parts, and reliable service.
+      </p>
+      <div class="hero-buttons">
+        <a href="book-service.html" class="btn btn-primary">
+          <i data-lucide="calendar"></i> Book Service
+        </a>
+        <a href="tel:+919106770230" class="btn btn-secondary">
+          <i data-lucide="phone"></i> Call Now
+        </a>
+        <a href="https://wa.me/919106770230" class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">
+          <i data-lucide="message-square"></i> WhatsApp
+        </a>
+      </div>
+    </div>
+    <!-- Scrolling Down Indicator -->
+    <div class="scroll-indicator">
+      <span>SCROLL DOWN</span>
+      <i data-lucide="chevron-down" style="width: 16px; height: 16px;"></i>
+    </div>
+  </section>
+
+  <!-- Statistics Ribbon -->
+  <section class="stats-ribbon" id="statsSection">
+    <div class="stats-grid">
+      <div class="stat-item">
+        <div class="stat-number" data-target="33" data-suffix="+">0</div>
+        <div class="stat-label">Years Experience</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number" data-target="10000" data-suffix="+">0</div>
+        <div class="stat-label">Happy Customers</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number" data-target="25000" data-suffix="+">0</div>
+        <div class="stat-label">Cars Serviced</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number" data-target="100" data-suffix="%">0</div>
+        <div class="stat-label">Customer Satisfaction</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about">
+    <div class="about-content">
+      <span class="section-tag">Since 1993</span>
+      <h2 class="section-title">A Legacy of <span class="gold-text">Master Craftsmanship</span></h2>
+      <p class="section-desc" style="margin-bottom: 2rem;">
+        For over three decades, Star Auto Service has stood as a beacon of trust, quality, and precision engineering. Founded on the principle of providing showroom-grade servicing without high premium markups, we specialize in high-end diagnostics, complete engine overhauls, and general maintenance for domestic and imported luxury brands.
+      </p>
+      <div class="about-features">
+        <div class="about-feature-item">
+          <div class="about-feature-icon">
+            <i data-lucide="award"></i>
+          </div>
+          <div>
+            <h4 class="about-feature-title">33 Years Experience</h4>
+            <p class="about-feature-desc">Unrivaled automotive repair heritage serving our loyal patrons.</p>
+          </div>
+        </div>
+        <div class="about-feature-item">
+          <div class="about-feature-icon">
+            <i data-lucide="users"></i>
+          </div>
+          <div>
+            <h4 class="about-feature-title">Skilled Mechanics</h4>
+            <p class="about-feature-desc">Highly trained technicians capable of servicing complex systems.</p>
+          </div>
+        </div>
+        <div class="about-feature-item">
+          <div class="about-feature-icon">
+            <i data-lucide="wrench"></i>
+          </div>
+          <div>
+            <h4 class="about-feature-title">Modern Equipment</h4>
+            <p class="about-feature-desc">State-of-the-art diagnostic computers and tools for absolute accuracy.</p>
+          </div>
+        </div>
+        <div class="about-feature-item">
+          <div class="about-feature-icon">
+            <i data-lucide="shield-check"></i>
+          </div>
+          <div>
+            <h4 class="about-feature-title">Genuine Spare Parts</h4>
+            <p class="about-feature-desc">We only source certified original spares for safety and durability.</p>
+          </div>
+        </div>
+        <div class="about-feature-item">
+          <div class="about-feature-icon">
+            <i data-lucide="badge-dollar-sign"></i>
+          </div>
+          <div>
+            <h4 class="about-feature-title">Affordable Pricing</h4>
+            <p class="about-feature-desc">Premium luxury standard solutions at sensible, competitive rates.</p>
+          </div>
+        </div>
+        <div class="about-feature-item">
+          <div class="about-feature-icon">
+            <i data-lucide="heart"></i>
+          </div>
+          <div>
+            <h4 class="about-feature-title">Customer Satisfaction</h4>
+            <p class="about-feature-desc">Our single-minded pursuit is your safety, peace of mind, and smile.</p>
+          </div>
+        </div>
+      </div>
+      <div style="margin-top: 2.5rem;">
+        <a href="services.html" class="btn btn-primary">Learn More</a>
+      </div>
+    </div>
+    <div class="about-image-wrapper">
+      <img src="https://images.unsplash.com/photo-1517524206127-48bbd363f3d7?q=80&w=1200&auto=format&fit=crop" alt="Premium Garage Diagnostics" style="width: 100%; height: 500px; object-fit: cover;">
+      <div class="about-image-overlay"></div>
+      <div class="experience-badge-large">
+        <div class="badge-number">33</div>
+        <div class="badge-text">Years of<br>Trust &amp; Service</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Car Brands Section -->
+  <section class="brands-section">
+    <div class="services-container">
+      <div class="services-header">
+        <span class="section-tag">Unmatched Capability</span>
+        <h2 class="section-title">All Major Brands Serviced</h2>
+        <p class="section-desc" style="margin: 0 auto 3.5rem auto; max-width: 700px;">
+          From daily drivers to ultra-premium luxury sedans and performance SUVs, our state-of-the-art workshop possesses original diagnostic equipment and specialized tooling for all marques.
+        </p>
+      </div>
+
+      <div class="brands-grid">
+        <div class="brand-card">
+          <i data-lucide="car"></i>
+          <span class="brand-card-name">Maruti Suzuki</span>
+        </div>
+        <div class="brand-card">
+          <i data-lucide="car-front"></i>
+          <span class="brand-card-name">Hyundai</span>
+        </div>
+        <div class="brand-card">
+          <i data-lucide="shield"></i>
+          <span class="brand-card-name">Tata Motors</span>
+        </div>
+        <div class="brand-card">
+          <i data-lucide="sparkles"></i>
+          <span class="brand-card-name">Mahindra</span>
+        </div>
+        <div class="brand-card">
+          <i data-lucide="gauge"></i>
+          <span class="brand-card-name">Honda</span>
+        </div>
+        <div class="brand-card">
+          <i data-lucide="award"></i>
+          <span class="brand-card-name">Toyota</span>
+        </div>
+        <div class="brand-card">
+          <i data-lucide="zap"></i>
+          <span class="brand-card-name">Kia</span>
+        </div>
+        <div class="brand-card">
+          <i data-lucide="gem"></i>
+          <span class="brand-card-name">BMW</span>
+        </div>
+        <div class="brand-card">
+          <i data-lucide="target"></i>
+          <span class="brand-card-name">Audi</span>
+        </div>
+        <div class="brand-card">
+          <i data-lucide="crown"></i>
+          <span class="brand-card-name">Mercedes-Benz</span>
+        </div>
+        <div class="brand-card">
+          <i data-lucide="compass"></i>
+          <span class="brand-card-name">Volkswagen</span>
+        </div>
+        <div class="brand-card">
+          <i data-lucide="clover"></i>
+          <span class="brand-card-name">Skoda</span>
+        </div>
+        <div class="brand-card">
+          <i data-lucide="flame"></i>
+          <span class="brand-card-name">Nissan</span>
+        </div>
+        <div class="brand-card">
+          <i data-lucide="infinity"></i>
+          <span class="brand-card-name">Renault</span>
+        </div>
+        <div class="brand-card">
+          <i data-lucide="star"></i>
+          <span class="brand-card-name">Ford</span>
+        </div>
+        <div class="brand-card">
+          <i data-lucide="hexagon"></i>
+          <span class="brand-card-name">MG</span>
+        </div>
+        <div class="brand-card">
+          <i data-lucide="navigation"></i>
+          <span class="brand-card-name">Jeep</span>
+        </div>
+        <div class="brand-card">
+          <i data-lucide="layers"></i>
+          <span class="brand-card-name">Volvo</span>
+        </div>
+        <div class="brand-card">
+          <i data-lucide="diamond"></i>
+          <span class="brand-card-name">Lexus</span>
+        </div>
+        <div class="brand-card">
+          <i data-lucide="trophy"></i>
+          <span class="brand-card-name">Porsche</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us Section -->
+  <section class="why-choose-us">
+    <div class="services-container">
+      <div class="services-header">
+        <span class="section-tag">Our Value Proposition</span>
+        <h2 class="section-title">Why Choose Us</h2>
+        <p class="section-desc" style="margin: 0 auto 4rem auto; max-width: 700px;">
+          Since 1993, we have worked relentlessly to build the most trusted workshop experience in the region. Here is what makes us special.
+        </p>
+      </div>
+
+      <div class="choose-grid">
+        <!-- Feature 1: 33 Years Experience -->
+        <div class="choose-card">
+          <div class="choose-icon">
+            <i data-lucide="award"></i>
+          </div>
+          <h3 class="choose-title">33 Years Experience</h3>
+          <p class="choose-desc">Over three decades of precision mechanical craftsmanship, deep diagnostic history, and trusted client care.</p>
+        </div>
+
+        <!-- Feature 2: Expert Mechanics -->
+        <div class="choose-card">
+          <div class="choose-icon">
+            <i data-lucide="users"></i>
+          </div>
+          <h3 class="choose-title">Expert Mechanics</h3>
+          <p class="choose-desc">Led by Papau Bhai and Iqbal Bhai, our master technicians understand every nuance of complex engines.</p>
+        </div>
+
+        <!-- Feature 3: Genuine Parts -->
+        <div class="choose-card">
+          <div class="choose-icon">
+            <i data-lucide="shield-check"></i>
+          </div>
+          <h3 class="choose-title">Genuine Parts</h3>
+          <p class="choose-desc">We only procure certified, authentic OEM/OES components for absolute mechanical safety and mileage life.</p>
+        </div>
+
+        <!-- Feature 4: Advanced Diagnostic Tools -->
+        <div class="choose-card">
+          <div class="choose-icon">
+            <i data-lucide="cpu"></i>
+          </div>
+          <h3 class="choose-title">Advanced Diagnostic Tools</h3>
+          <p class="choose-desc">Equipped with luxury manufacturer grade digital diagnostics systems to correctly pinpoint faults instantly.</p>
+        </div>
+
+        <!-- Feature 5: Affordable Pricing -->
+        <div class="choose-card">
+          <div class="choose-icon">
+            <i data-lucide="badge-dollar-sign"></i>
+          </div>
+          <h3 class="choose-title">Affordable Pricing</h3>
+          <p class="choose-desc">Honest, straightforward pricing without artificial premium diagnostic markups or hidden fees.</p>
+        </div>
+
+        <!-- Feature 6: Fast & Reliable Service -->
+        <div class="choose-card">
+          <div class="choose-icon">
+            <i data-lucide="clock"></i>
+          </div>
+          <h3 class="choose-title">Fast &amp; Reliable Service</h3>
+          <p class="choose-desc">Optimized workshop routing ensures high accuracy solutions with punctual, rapid key-to-key handovers.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Preview Section -->
+  <section class="services-preview">
+    <div class="services-container">
+      <div class="services-header">
+        <span class="section-tag">Elite Capabilities</span>
+        <h2 class="section-title">Our Premium Services</h2>
+        <p class="section-desc" style="margin: 0 auto 3rem auto;">
+          We provide a comprehensive range of custom maintenance solutions suited for exotic, classic, and high-performance modern automobiles.
+        </p>
+      </div>
+
+      <div class="services-grid">
+        <!-- Diagnostic -->
+        <div class="service-card">
+          <div class="service-card-icon">
+            <i data-lucide="scan-line"></i>
+          </div>
+          <h3 class="service-card-title">Computerized Diagnostics</h3>
+          <p class="service-card-desc">Advanced ECU scanning, sensor tracking, emission mapping, and electric health diagnostics to prevent critical failure loops.</p>
+          <a href="services.html" class="service-card-link">Learn More <i data-lucide="arrow-right"></i></a>
+        </div>
+
+        <!-- Engine -->
+        <div class="service-card">
+          <div class="service-card-icon">
+            <i data-lucide="cog"></i>
+          </div>
+          <h3 class="service-card-title">Engine Care &amp; Tuning</h3>
+          <p class="service-card-desc">Complete multi-valve engine overhaul, timing belt correction, valve clearances, and specialized component adjustments.</p>
+          <a href="services.html" class="service-card-link">Learn More <i data-lucide="arrow-right"></i></a>
+        </div>
+
+        <!-- Brake System -->
+        <div class="service-card">
+          <div class="service-card-icon">
+            <i data-lucide="shield-alert"></i>
+          </div>
+          <h3 class="service-card-title">Braking Solutions</h3>
+          <p class="service-card-desc">Brake pad, brake caliper servicing, drum adjustments, ABS controller setup, and brake oil pressure flushing for supreme stopping power.</p>
+          <a href="services.html" class="service-card-link">Learn More <i data-lucide="arrow-right"></i></a>
+        </div>
+      </div>
+
+      <div class="services-more-cta">
+        <a href="services.html" class="btn btn-secondary">Explore All Workshop Services <i data-lucide="arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Master Mechanics Section -->
+  <section class="mechanics">
+    <div class="mechanics-header">
+      <span class="section-tag">Meet Our Leaders</span>
+      <h2 class="section-title">Master Craftsmen</h2>
+      <p class="section-desc" style="margin: 0 auto;">
+        Our highly distinguished team of mechanical engineers bring over three decades of professional diagnostic and structural automotive rebuilding experience.
+      </p>
+    </div>
+
+    <div class="mechanics-grid">
+      <!-- Papau Bhai -->
+      <div class="mechanic-card">
+        <div class="mechanic-image-container">
+          <img src="https://images.unsplash.com/photo-1504222490345-c075b6008014?q=80&w=1200&auto=format&fit=crop" class="mechanic-image" alt="Papau Bhai - Master Mechanic">
+          <div class="mechanic-role-badge">Senior Mechanic - Left Side</div>
+        </div>
+        <div class="mechanic-info">
+          <div>
+            <h3 class="mechanic-name">Papau Bhai</h3>
+            <p class="mechanic-specialty">Transmission &amp; Engine Specialist (33 Years Exp)</p>
+          </div>
+          <div>
+            <div class="mechanic-phone-row">
+              <i data-lucide="phone" class="gold-text"></i>
+              <a href="tel:+919106770230" class="mechanic-phone-link">+91 9106770230</a>
+            </div>
+            <div class="mechanic-actions">
+              <a href="tel:+919106770230" class="btn btn-primary" style="padding: 0.6rem 1rem; font-size: 0.75rem;">Call Now</a>
+              <a href="https://wa.me/919106770230" class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer" style="padding: 0.6rem 1rem; font-size: 0.75rem;">WhatsApp</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Iqbal Bhai -->
+      <div class="mechanic-card">
+        <div class="mechanic-image-container">
+          <img src="https://images.unsplash.com/photo-1486006920555-c77dce18193b?q=80&w=1200&auto=format&fit=crop" class="mechanic-image" alt="Iqbal Bhai - Master Mechanic">
+          <div class="mechanic-role-badge">Senior Mechanic - Right Side</div>
+        </div>
+        <div class="mechanic-info">
+          <div>
+            <h3 class="mechanic-name">Iqbal Bhai</h3>
+            <p class="mechanic-specialty">Electrical Tuning &amp; Brake Expert (33 Years Exp)</p>
+          </div>
+          <div>
+            <div class="mechanic-phone-row">
+              <i data-lucide="phone" class="gold-text"></i>
+              <a href="tel:+919909698474" class="mechanic-phone-link">+91 9909698474</a>
+            </div>
+            <div class="mechanic-actions">
+              <a href="tel:+919909698474" class="btn btn-primary" style="padding: 0.6rem 1rem; font-size: 0.75rem;">Call Now</a>
+              <a href="https://wa.me/919909698474" class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer" style="padding: 0.6rem 1rem; font-size: 0.75rem;">WhatsApp</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Customer Reviews Section -->
+  <section class="testimonials-section">
+    <div class="services-container">
+      <div class="services-header">
+        <span class="section-tag">Client Reviews</span>
+        <h2 class="section-title">What Our Customers Say</h2>
+        <p class="section-desc" style="margin: 0 auto 4rem auto; max-width: 700px;">
+          Read genuine feedback from luxury car owners who trust Papau Bhai and Iqbal Bhai for absolute mechanical precision.
+        </p>
+      </div>
+
+      <div class="reviews-grid">
+        <!-- Review 1 -->
+        <div class="review-card">
+          <div class="review-header">
+            <div class="review-stars">
+              <i data-lucide="star" style="fill: var(--accent-gold); width: 16px; height: 16px;"></i>
+              <i data-lucide="star" style="fill: var(--accent-gold); width: 16px; height: 16px;"></i>
+              <i data-lucide="star" style="fill: var(--accent-gold); width: 16px; height: 16px;"></i>
+              <i data-lucide="star" style="fill: var(--accent-gold); width: 16px; height: 16px;"></i>
+              <i data-lucide="star" style="fill: var(--accent-gold); width: 16px; height: 16px;"></i>
+            </div>
+            <i data-lucide="quote" class="review-quote-icon"></i>
+          </div>
+          <p class="review-text">
+            "Papau Bhai resolved a complex double-clutch transmission shudder in my BMW that even authorized dealers couldn't fix. Masterful work, fair rates, and highly professional!"
+          </p>
+          <div class="reviewer-profile">
+            <div class="reviewer-avatar">RK</div>
+            <div>
+              <h4 class="reviewer-name">Rahul K.</h4>
+              <span class="reviewer-role">BMW 5 Series Owner</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="review-card">
+          <div class="review-header">
+            <div class="review-stars">
+              <i data-lucide="star" style="fill: var(--accent-gold); width: 16px; height: 16px;"></i>
+              <i data-lucide="star" style="fill: var(--accent-gold); width: 16px; height: 16px;"></i>
+              <i data-lucide="star" style="fill: var(--accent-gold); width: 16px; height: 16px;"></i>
+              <i data-lucide="star" style="fill: var(--accent-gold); width: 16px; height: 16px;"></i>
+              <i data-lucide="star" style="fill: var(--accent-gold); width: 16px; height: 16px;"></i>
+            </div>
+            <i data-lucide="quote" class="review-quote-icon"></i>
+          </div>
+          <p class="review-text">
+            "Iqbal Bhai is a genius with automobile electricals. He correctly diagnosed a faulty wiring loom in my Kia within 15 minutes. Absolutely genuine spares and highly recommended workshop!"
+          </p>
+          <div class="reviewer-profile">
+            <div class="reviewer-avatar">AM</div>
+            <div>
+              <h4 class="reviewer-name">Anish M.</h4>
+              <span class="reviewer-role">Kia Seltos Owner</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="review-card">
+          <div class="review-header">
+            <div class="review-stars">
+              <i data-lucide="star" style="fill: var(--accent-gold); width: 16px; height: 16px;"></i>
+              <i data-lucide="star" style="fill: var(--accent-gold); width: 16px; height: 16px;"></i>
+              <i data-lucide="star" style="fill: var(--accent-gold); width: 16px; height: 16px;"></i>
+              <i data-lucide="star" style="fill: var(--accent-gold); width: 16px; height: 16px;"></i>
+              <i data-lucide="star" style="fill: var(--accent-gold); width: 16px; height: 16px;"></i>
+            </div>
+            <i data-lucide="quote" class="review-quote-icon"></i>
+          </div>
+          <p class="review-text">
+            "Been servicing my multi-brand garage vehicles with Papau Bhai and Iqbal Bhai since 2011. Reliable diagnostics, prompt updates, and they treat your car with absolute respect."
+          </p>
+          <div class="reviewer-profile">
+            <div class="reviewer-avatar">SP</div>
+            <div>
+              <h4 class="reviewer-name">Sanjay P.</h4>
+              <span class="reviewer-role">Toyota Fortuner Owner</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Before / After Gallery Section -->
+  <section class="before-after-section">
+    <div class="services-container">
+      <div class="services-header" style="text-align: center;">
+        <span class="section-tag">Quality Restorations</span>
+        <h2 class="section-title">Before / After Gallery</h2>
+        <p class="section-desc" style="margin: 0 auto 3.5rem auto; max-width: 700px;">
+          Drag the slider to see the pristine results of our elite detailing, mechanical repair, and structural restoration works.
+        </p>
+      </div>
+
+      <div class="before-after-grid">
+        <!-- DETAILED ENGINE RESTORATION -->
+        <div class="slider-wrapper">
+          <h3 class="slider-title">Engine Bay Rebuild</h3>
+          <div class="ba-slider" id="engineSlider">
+            <div class="img background-img" style="background-image: url('https://images.unsplash.com/photo-1517524206127-48bbd363f3d7?q=80&w=1200&auto=format&fit=crop');">
+              <!-- After -->
+            </div>
+            <div class="img foreground-img" style="background-image: url('https://images.unsplash.com/photo-1486006920555-c77dce18193b?q=80&w=1200&auto=format&fit=crop');">
+              <!-- Before -->
+            </div>
+            <input type="range" min="0" max="100" value="50" class="slider-range" aria-label="Before after image comparison slider">
+            <div class="slider-button"></div>
+            <div class="ba-badge before-badge">BEFORE</div>
+            <div class="ba-badge after-badge">AFTER</div>
+          </div>
+        </div>
+
+        <!-- CAR BODY PAINTING & SHINE -->
+        <div class="slider-wrapper">
+          <h3 class="slider-title">Premium Detail &amp; Paint</h3>
+          <div class="ba-slider" id="bodySlider">
+            <div class="img background-img" style="background-image: url('https://images.unsplash.com/photo-1616788494707-ec28f08d05a1?q=80&w=1200&auto=format&fit=crop');">
+              <!-- After -->
+            </div>
+            <div class="img foreground-img" style="background-image: url('https://images.unsplash.com/photo-1504222490345-c075b6008014?q=80&w=1200&auto=format&fit=crop');">
+              <!-- Before -->
+            </div>
+            <input type="range" min="0" max="100" value="50" class="slider-range" aria-label="Before after image comparison slider">
+            <div class="slider-button"></div>
+            <div class="ba-badge before-badge">BEFORE</div>
+            <div class="ba-badge after-badge">AFTER</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq-section" style="padding: 6rem 2rem; background-color: var(--primary-black); border-top: 1px solid var(--glass-border);">
+    <div class="services-container" style="max-width: 900px; margin: 0 auto;">
+      <div class="services-header" style="text-align: center;">
+        <span class="section-tag">Got Questions?</span>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-desc" style="margin: 0 auto 3.5rem auto;">
+          Everything you need to know about our premium automobile workshop procedures, service timelines, and parts warranties.
+        </p>
+      </div>
+
+      <div class="faq-accordion">
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>What brands of vehicles do you specialize in?</span>
+            <i data-lucide="chevron-down" class="faq-arrow" style="width: 18px; height: 18px;"></i>
+          </div>
+          <div class="faq-answer">
+            <p>We are a professional multi-brand luxury workshop. While we service everyday commuter brands like Maruti Suzuki, Hyundai, Honda, and Toyota with expert precision, our technicians are also specially trained and equipped with dedicated manufacturer-grade diagnostic scanners for premium European and luxury vehicles, including BMW, Audi, Mercedes-Benz, Porsche, and Jaguar.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Do you use genuine certified spare parts?</span>
+            <i data-lucide="chevron-down" class="faq-arrow" style="width: 18px; height: 18px;"></i>
+          </div>
+          <div class="faq-answer">
+            <p>Absolutely. We have a strict zero-tolerance policy against counterfeit or sub-standard components. Every spare part, engine oil, filter, and electronic element installed at Star Auto Service is sourced directly from original manufacturers (OEM/OES) or authorized premium distributors, and carries its standard official replacement warranty.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>How long does a general car service take?</span>
+            <i data-lucide="chevron-down" class="faq-arrow" style="width: 18px; height: 18px;"></i>
+          </div>
+          <div class="faq-answer">
+            <p>A standard scheduled General Car Service (oil change, filter updates, and comprehensive 50-point diagnostic inspection) takes approximately 2 to 4 hours. If any complex issues are discovered that require parts replacements or deep mechanical calibration, our team (led by Papau Bhai or Iqbal Bhai) will immediately contact you with a detailed photo breakdown and a revised delivery timeline.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Do you offer emergency breakdown or roadside assistance?</span>
+            <i data-lucide="chevron-down" class="faq-arrow" style="width: 18px; height: 18px;"></i>
+          </div>
+          <div class="faq-answer">
+            <p>Yes, we offer dedicated emergency breakdown support! If your vehicle fails to start or breaks down on the highway, you can call Papau Bhai (+91 9106770230) or Iqbal Bhai (+91 9909698474) directly. We will either dispatch a recovery technician to your location for on-the-spot minor repairs, or coordinate an emergency flatbed tow truck to transport your vehicle safely to our workshop.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Is there a pick-up and drop-off facility?</span>
+            <i data-lucide="chevron-down" class="faq-arrow" style="width: 18px; height: 18px;"></i>
+          </div>
+          <div class="faq-answer">
+            <p>Yes. For our patrons' convenience, we provide safe pick-up and drop-off services for your vehicle across the city. Our professional drivers are fully insured and adhere to strict safety standards, ensuring your car arrives at our garage and returns back to your doorstep in pristine condition.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter Premium Section -->
+  <section class="newsletter-section">
+    <div class="newsletter-glass-panel">
+      <span class="section-tag">Newsletter</span>
+      <h2 class="newsletter-heading">Stay Updated</h2>
+      <p class="newsletter-desc">
+        Subscribe to our newsletter to receive automotive maintenance tips, seasonal offers, and repair advice from Papau Bhai &amp; Iqbal Bhai.
+      </p>
+
+      <form id="newsletterForm" novalidate>
+        <div class="newsletter-form-wrapper">
+          <input type="email" id="newsletterEmail" placeholder="Enter your email address" class="newsletter-input" required autocomplete="email">
+          <button type="submit" class="btn btn-primary" style="padding: 1.1rem 2rem; border-radius: 10px;">Subscribe</button>
+        </div>
+        <div id="newsletterFeedback" style="font-size: 0.8rem; margin-top: 0.85rem; font-family: var(--font-mono); font-weight: 500;"></div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Interactive Call to Action Banner -->
+  <section class="cta-banner">
+    <div class="cta-bg"></div>
+    <div class="cta-overlay"></div>
+    <div class="cta-content">
+      <h2 class="cta-title">Ready to Service Your Car?</h2>
+      <p class="cta-desc">
+        Experience the distinct advantage of premium maintenance from specialized luxury car specialists. Schedule your custom diagnostics check today.
+      </p>
+      <div class="cta-buttons">
+        <a href="book-service.html" class="btn btn-primary btn-accent">
+          <i data-lucide="calendar"></i> Book Service
+        </a>
+        <a href="contact.html" class="btn btn-secondary">
+          <i data-lucide="phone"></i> Contact Us
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Premium Dark Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div>
+        <h3 class="footer-brand-title">STAR AUTO SERVICE</h3>
+        <p class="footer-brand-desc">
+          Best Service Center For All Car Companies. Over 33 years of premium mechanical rebuilding, digital engine calibration, and absolute reliability. Serving with perfection and passion.
+        </p>
+        <div class="footer-socials">
+          <a href="#" class="footer-social-link" aria-label="Facebook"><i data-lucide="facebook"></i></a>
+          <a href="#" class="footer-social-link" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+          <a href="#" class="footer-social-link" aria-label="YouTube"><i data-lucide="youtube"></i></a>
+        </div>
+      </div>
+
+      <div>
+        <h4 class="footer-heading">Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="book-service.html">Book Service</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-heading">Business Hours</h4>
+        <ul class="footer-links">
+          <li class="footer-contact-item">
+            <i data-lucide="clock"></i>
+            <div class="footer-contact-text">
+              <strong>Monday - Saturday</strong>
+              09:00 AM - 08:00 PM
+            </div>
+          </li>
+          <li class="footer-contact-item">
+            <i data-lucide="info"></i>
+            <div class="footer-contact-text">
+              <strong>Sunday</strong>
+              Emergency Call Only
+            </div>
+          </li>
+          <li class="footer-contact-item">
+            <i data-lucide="map-pin"></i>
+            <div class="footer-contact-text">
+              <strong>Location</strong>
+              Surat, Gujarat, India
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; <span class="current-year">2026</span> Star Auto Service. All Rights Reserved.</p>
+      <p class="footer-thankyou">Thank You For Visiting Our Website</p>
+      <p class="footer-credit">Developed By <span class="gold-text">FAIZ KHAN</span></p>
+    </div>
+  </footer>
+
+  <!-- Floating Quick Actions -->
+  <div class="floating-actions">
+    <a href="tel:+919106770230" class="floating-btn floating-call" title="Call Us Now">
+      <i data-lucide="phone"></i>
+    </a>
+    <a href="https://wa.me/919106770230" class="floating-btn floating-whatsapp" target="_blank" rel="noopener noreferrer" title="WhatsApp Chat">
+      <i data-lucide="message-square"></i>
+    </a>
+    <button class="floating-btn floating-backtop" id="backTopBtn" title="Back To Top">
+      <i data-lucide="arrow-up"></i>
+    </button>
+  </div>
+
+  <!-- Lucide Icon Libraries and Scripts -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="/js/script.js"></script>
+</body>
+</html>
